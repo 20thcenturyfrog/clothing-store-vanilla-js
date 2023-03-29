@@ -1,0 +1,127 @@
+//класс, чтобы изменить задний фон оффера и хэдера на главной странице. (хэдер должен быть внутри)
+.header-offer-wrapper {
+  background: linear-gradient(
+    90deg,
+    var(--background-color) 0%,
+    var(--background-color) 55%,
+    var(--secondary-background-color) 55%,
+    var(--secondary-background-color) 100%
+  );
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+
+  // .offer__desc
+
+  &__desc {
+    padding-left: 15.3vw;
+    padding-top: 14.5rem;
+    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5rem;
+  }
+
+  // .offer__title
+
+  &__title {
+    @include h1;
+    margin: 0;
+  }
+
+  // .offer__tagline
+
+  &__tagline {
+    @include large-text;
+    text-align: end;
+
+    margin-right: 16.4rem;
+  }
+
+  // .offer__buttons
+
+  &__buttons {
+    display: flex;
+    align-items: stretch;
+    margin-right: 16.4rem;
+    justify-content: end;
+  }
+
+  // .offer__button
+
+  &__button {
+    @include main-text;
+    color: var(--background-color);
+    // .offer__button_scroll
+
+    &_scroll {
+      @include white-button;
+      padding: 19.5px 26px;
+      background-color: var(--arrow-button-cta-color);
+      border-color: var(--arrow-button-cta-color);
+
+      //   & :hover {
+      //     @include white-button-hover;
+      //     border: none;
+      //     background-color: var(--arrow-button-cta-color);
+      //   }
+    }
+
+    // .offer__button_store
+
+    &_store {
+      @include cta-button;
+
+      //   & :hover {
+      //     @include cta-button-hover;
+      //   }
+    }
+  }
+
+  // .offer__arrow
+
+  &__arrow {
+    // & :hover {
+    //   border: none;
+    //   background-color: inherit;
+    // }
+  }
+
+  // .offer__pictures
+
+  &__pictures {
+  }
+
+  // элемент в котором лежит большая фотография
+
+  &__picture-wrap {
+  }
+
+  // .offer__photo
+
+  &__photo {
+    max-width: 100%;
+
+    // .offer__photo_large
+
+    &_large {
+    }
+
+    // .offer__photo_small
+
+    &_small {
+    }
+
+    // .offer__photo_mid
+
+    &_mid {
+    }
+  }
+
+  // элемент в котором лежат фотографии поменьше
+
+  &__pictures-container {
+  }
+}

@@ -4,16 +4,16 @@
 // Подключение шрифта
 
 @font-face {
-    font-family: "Raleway";
-    src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
-    src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
-            format("embedded-opentype"),
-        url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
-        url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
-        url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
-        url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
-    font-weight: 300 800;
-    font-style: normal;
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
+    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
+  font-weight: 300 800;
+  font-style: normal;
 }
 
 // В SCSS эти переменные можно использовать, например, так:
@@ -39,85 +39,85 @@
 // Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.
 
 :root {
-    --background-color: #ffffff;
-    --secondary-background-color: #f1eadc;
-    --font-color: #000000;
-    --cta-color: #6e9c9f;
-    --modal-background-cta-color: rgba(110, 156, 159, 0.95);
-    --image-hover-cta-color: rgba(110, 156, 159, 0.64);
-    --arrow-button-cta-color: rgba(110, 156, 159, 0.1);
-    --button-hover-color: #509498;
-    --link-underline-color: #cededf;
-    --accent-color: #998e78;
-    --section-color: #909090;
-    --goods-on-page-color: #808080;
-    --old-price-color: #9c9c9c;
-    --quantity-box-color: #afafaf;
-    --placeholder-color: #868686;
-    font-family: "Raleway";
-    font-style: normal;
-    font-size: 10px;
-    font-feature-settings: "pnum" on, "lnum" on; // Этого нет в макете, но лучше добавить: это поможет сделать цифры ровными, без этого они будут отображаться "волной"
+  --background-color: #ffffff;
+  --secondary-background-color: #f1eadc;
+  --font-color: #000000;
+  --cta-color: #6e9c9f;
+  --modal-background-cta-color: rgba(110, 156, 159, 0.95);
+  --image-hover-cta-color: rgba(110, 156, 159, 0.64);
+  --arrow-button-cta-color: rgba(110, 156, 159, 0.1);
+  --button-hover-color: #509498;
+  --link-underline-color: #cededf;
+  --accent-color: #998e78;
+  --section-color: #909090;
+  --goods-on-page-color: #808080;
+  --old-price-color: #9c9c9c;
+  --quantity-box-color: #afafaf;
+  --placeholder-color: #868686;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 10px;
+  font-feature-settings: "pnum" on, "lnum" on; // Этого нет в макете, но лучше добавить: это поможет сделать цифры ровными, без этого они будут отображаться "волной"
 }
 
 // Для самых крупных заголовков
 
 @mixin h1 {
-    font-weight: 500;
-    font-size: 5.5rem;
-    line-height: 110%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для заголовков поменьше (например, названия разделов на лендинге — "Новая коллекция" и т.д.)
 
 @mixin h2 {
-    font-weight: 500;
-    font-size: 4rem;
-    line-height: 110%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для ещё более маленьких заголовков (например, заголовки на странице "О бренде", заголовки различных форм и т.д.)
 
 @mixin h3 {
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для самых маленьких заголовков (например, названия столбцов в корзине и т.д.)
 
 @mixin h4 {
-    font-weight: 500;
-    font-size: 2rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для крупного текста (например, описание на оффере)
 
 @mixin large-text {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для обычного текста
 // При использовании нужно дополнительно указать цвет через переменные выше
 
 @mixin main-text {
-    font-weight: 500;
-    font-size: 1.7rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
 }
 
 // Для цены в карточке товара
@@ -125,96 +125,96 @@
 // Если нужно оформить старую цену, после вызова миксина прописать дополнительно text-decoration: line-through; и указать нужный цвет
 
 @mixin price {
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
 }
 
 // Для текста WOMAZING в логотипе (на всякий случай)
 
 @mixin logo {
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 100%;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    color: var(--font-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--font-color);
 }
 
 // Для меню в хедере и футере
 
 @mixin menu {
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Для меню в хедере и футере при наведении (можно также применять к меню с типами одежды в футере)
 
 @mixin menu-hover {
-    font-weight: 700;
-    color: var(--cta-color);
-    transition: 0.5s ease;
-    cursor: pointer;
+  font-weight: 700;
+  color: var(--cta-color);
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 // Для прочего текста в футере, в т.ч. меню с типами одежды
 
 @mixin footer-text {
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 140%;
-    letter-spacing: 0.02rem;
-    color: var(--font-color);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
 }
 
 // Белая кнопка
 
 @mixin white-button {
-    font-weight: 400;
-    font-size: 1.7rem;
-    line-height: 138.9%;
-    letter-spacing: 0.02rem;
-    text-align: center;
-    color: var(--cta-color);
-    background-color: var(--background-color);
-    border: 1px solid var(--cta-color);
-    padding: 22px 50px;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 138.9%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--cta-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--cta-color);
+  padding: 22px 50px;
 }
 
 // Белая кнопка — поведение при наведении
 
 @mixin white-button-hover {
-    color: var(--background-color);
-    background-color: var(--cta-color);
-    border: 1px solid var(--cta-color);
-    transition: 0.5s ease;
-    cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--cta-color);
+  border: 1px solid var(--cta-color);
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 // Салатовая кнопка (в цвете CTA)
 
 @mixin cta-button {
-    font-weight: 400;
-    font-size: 1.7rem;
-    line-height: 138.9%;
-    letter-spacing: 0.02rem;
-    text-align: center;
-    color: var(--background-color);
-    background-color: var(--cta-color);
-    border: 1px solid var(--cta-color);
-    padding: 22px 50px;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 138.9%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--background-color);
+  background-color: var(--cta-color);
+  border: 1px solid var(--cta-color);
+  padding: 22px 50px;
 }
 
 // Салатовая кнопка — поведение при наведении
 
 @mixin cta-button-hover {
-    color: var(--background-color);
-    background-color: var(--button-hover-color);
-    border: 1px solid var(--button-hover-color);
-    transition: 0.5s ease;
-    cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--button-hover-color);
+  border: 1px solid var(--button-hover-color);
+  transition: 0.5s ease;
+  cursor: pointer;
 }

@@ -25,4 +25,79 @@
   font-style: normal;
   font-size: 10px;
   font-feature-settings: "pnum" on, "lnum" on;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.header-offer-wrapper {
+  background: linear-gradient(90deg, var(--background-color) 0%, var(--background-color) 55%, var(--secondary-background-color) 55%, var(--secondary-background-color) 100%);
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+}
+.offer__desc {
+  padding-left: 15.3vw;
+  padding-top: 14.5rem;
+  padding-right: 4vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.5rem;
+}
+.offer__title {
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+  margin: 0;
+}
+.offer__tagline {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+  text-align: end;
+  margin-right: 16.4rem;
+}
+.offer__buttons {
+  display: flex;
+  align-items: stretch;
+  margin-right: 16.4rem;
+  justify-content: end;
+}
+.offer__button {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--background-color);
+}
+.offer__button_scroll {
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 138.9%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--cta-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--cta-color);
+  padding: 22px 50px;
+  padding: 19.5px 26px;
+  background-color: var(--arrow-button-cta-color);
+  border-color: var(--arrow-button-cta-color);
+}
+.offer__button_store {
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 138.9%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--background-color);
+  background-color: var(--cta-color);
+  border: 1px solid var(--cta-color);
+  padding: 22px 50px;
+}
+.offer__photo {
+  max-width: 100%;
+}
