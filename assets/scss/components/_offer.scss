@@ -7,6 +7,7 @@
     var(--secondary-background-color) 55%,
     var(--secondary-background-color) 100%
   );
+  padding-bottom: 7.6vh;
 }
 
 .offer {
@@ -17,11 +18,11 @@
 
   &__desc {
     padding-left: 15.3vw;
-    padding-top: 14.5rem;
+    padding-top: 18.3vh;
     padding-right: 4vw;
     display: flex;
     flex-direction: column;
-    row-gap: 4.5rem;
+    row-gap: 5.7vh;
   }
 
   // .offer__title
@@ -37,7 +38,7 @@
     @include large-text;
     text-align: end;
 
-    margin-right: 16.4rem;
+    margin-right: 10.68vw;
   }
 
   // .offer__buttons
@@ -45,7 +46,7 @@
   &__buttons {
     display: flex;
     align-items: stretch;
-    margin-right: 16.4rem;
+    margin-right: 10.68vw;
     justify-content: end;
   }
 
@@ -62,11 +63,11 @@
       background-color: var(--arrow-button-cta-color);
       border-color: var(--arrow-button-cta-color);
 
-      //   & :hover {
-      //     @include white-button-hover;
-      //     border: none;
-      //     background-color: var(--arrow-button-cta-color);
-      //   }
+      &:hover {
+        @include white-button-hover;
+
+        background-color: var(--arrow-button-cta-color);
+      }
     }
 
     // .offer__button_store
@@ -74,29 +75,29 @@
     &_store {
       @include cta-button;
 
-      //   & :hover {
-      //     @include cta-button-hover;
-      //   }
+      &:hover {
+        @include cta-button-hover;
+      }
     }
   }
 
   // .offer__arrow
 
   &__arrow {
-    // & :hover {
-    //   border: none;
-    //   background-color: inherit;
-    // }
+    transition: 0.7s ease;
   }
 
   // .offer__pictures
 
   &__pictures {
+    margin-left: 3.125vw;
+    margin-right: 15.9vw;
   }
 
   // элемент в котором лежит большая фотография
 
   &__picture-wrap {
+    position: relative;
   }
 
   // .offer__photo
@@ -112,16 +113,25 @@
     // .offer__photo_small
 
     &_small {
+      z-index: 1;
+      position: absolute;
+      left: 39vh;
+      bottom: 20.5vw;
     }
 
     // .offer__photo_mid
 
     &_mid {
+      z-index: 1;
+      position: absolute;
+      bottom: -7.6vh;
+      left: -8.46vw;
     }
   }
 
   // элемент в котором лежат фотографии поменьше
 
   &__pictures-container {
+    position: relative;
   }
 }
