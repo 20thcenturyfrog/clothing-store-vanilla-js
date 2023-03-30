@@ -8,11 +8,21 @@
     var(--secondary-background-color) 100%
   );
   padding-bottom: 7.6vh;
+  @media (max-width: $big-tablet) {
+    padding-bottom: 2vh;
+  }
+  // @media (max-width: $tablet) {
+  //   height: max-content;
+  // }
 }
 
 .offer {
   display: grid;
   grid-template-columns: 55% 1fr;
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 
   // .offer__desc
 
@@ -23,6 +33,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 5.7vh;
+    @media (max-width: $desktop) {
+      padding-left: 5vw;
+    }
   }
 
   // .offer__title
@@ -84,6 +97,8 @@
   // .offer__arrow
 
   &__arrow {
+    position: relative;
+    top: 0px;
     transition: 0.7s ease;
   }
 
@@ -91,7 +106,10 @@
 
   &__pictures {
     margin-left: 3.125vw;
-    margin-right: 15.9vw;
+    padding-right: 15.9vw;
+    @media (max-width: $desktop) {
+      padding-right: 13vw;
+    }
   }
 
   // элемент в котором лежит большая фотография
@@ -108,6 +126,14 @@
     // .offer__photo_large
 
     &_large {
+      @media (max-width: $big-tablet) {
+        position: absolute;
+        top: 10vh;
+      }
+      @media (max-width: $tablet) {
+        max-width: 87%;
+        left: 8vw;
+      }
     }
 
     // .offer__photo_small
@@ -115,8 +141,20 @@
     &_small {
       z-index: 1;
       position: absolute;
-      left: 39vh;
-      bottom: 20.5vw;
+      left: 20.1vw;
+      bottom: 41.8vh;
+      @media (max-width: $desktop) {
+        bottom: 32.5vh;
+        max-width: 50%;
+      }
+      @media (max-width: $big-tablet) {
+        left: 23vw;
+        top: 21vh;
+      }
+      @media (max-width: $tablet) {
+        left: 57vw;
+        max-width: 41%;
+      }
     }
 
     // .offer__photo_mid
@@ -126,6 +164,20 @@
       position: absolute;
       bottom: -7.6vh;
       left: -8.46vw;
+      @media (max-width: $desktop) {
+        max-width: 60%;
+      }
+      @media (max-width: $big-tablet) {
+        bottom: -53.6vh;
+        max-width: 55%;
+        left: -6vw;
+      }
+      @media (max-width: $tablet) {
+        max-width: 40%;
+        bottom: -71.6vh;
+
+        left: -1vw;
+      }
     }
   }
 

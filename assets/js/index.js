@@ -9,10 +9,9 @@ offerScrollBtn.onMouseOver(moveArrowIcon);
 offerScrollBtn.onMouseOut(unmoveArrowIcon);
 
 function moveArrowIcon() {
-  arrowIcon.style.position = "relative";
   arrowIcon.style.top = "1.89vh";
 }
 function unmoveArrowIcon() {
   arrowIcon.style.top = "0";
-  arrowIcon.style.transition = "0.75s ease";
+  //   arrowIcon.style.transition = "0.7s ease";
 }
