@@ -1,0 +1,65 @@
+.container {
+    display: grid;
+    grid-template-columns: 15% 52% 32% 2%;
+
+    padding-left: 238px;
+    //padding-right: 245px;
+    padding-top: 35px;
+    max-width: 1600px;
+}
+
+.container__logo>img {
+    padding-top: 11px;
+    width: 139px;
+    height: 25px;
+}
+
+.container__nav {
+    padding-left: 90px;
+
+}
+
+nav>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.6fr 0.5fr;
+    font-family: 'Raleway';
+    gap: 50px;
+}
+
+
+ul>li {
+    list-style-type: none;
+    @include menu;
+    font-family: 'Raleway';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    @include menu-hover;
+}
+
+.container__phone {
+    display: grid;
+    grid-template-columns: 0.4fr 3fr;
+    padding-left: 180px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+}
+
+.container__phone>img {
+    padding-top: 15px;
+    width: 17px;
+    height: 17px;
+}
+
+.container__basket {
+    padding-left: 90px;
+    padding-top: 10px;
+}

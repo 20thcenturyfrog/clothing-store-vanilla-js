@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot") format("embedded-opentype"), url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"), url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"), url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"), url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
+  font-weight: 300 800;
+  font-style: normal;
+}
+:root {
+  --background-color: #ffffff;
+  --secondary-background-color: #f1eadc;
+  --font-color: #000000;
+  --cta-color: #6e9c9f;
+  --modal-background-cta-color: rgba(110, 156, 159, 0.95);
+  --image-hover-cta-color: rgba(110, 156, 159, 0.64);
+  --arrow-button-cta-color: rgba(110, 156, 159, 0.1);
+  --button-hover-color: #509498;
+  --link-underline-color: #cededf;
+  --accent-color: #998e78;
+  --section-color: #909090;
+  --goods-on-page-color: #808080;
+  --old-price-color: #9c9c9c;
+  --quantity-box-color: #afafaf;
+  --placeholder-color: #868686;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 10px;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 15% 52% 32% 2%;
+  padding-left: 238px;
+  padding-top: 35px;
+  max-width: 1600px;
+}
+
+.container__logo > img {
+  padding-top: 11px;
+  width: 139px;
+  height: 25px;
+}
+
+.container__nav {
+  padding-left: 90px;
+}
+
+nav > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr 0.5fr;
+  font-family: "Raleway";
+  gap: 50px;
+}
+
+ul > li {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+  font-family: "Raleway";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: 700;
+  color: var(--cta-color);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.container__phone {
+  display: grid;
+  grid-template-columns: 0.4fr 3fr;
+  padding-left: 180px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+}
+
+.container__phone > img {
+  padding-top: 15px;
+  width: 17px;
+  height: 17px;
+}
+
+.container__basket {
+  padding-left: 90px;
+  padding-top: 10px;
+}
