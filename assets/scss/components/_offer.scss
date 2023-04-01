@@ -11,14 +11,11 @@
   @media (max-width: $big-tablet) {
     padding-bottom: 2vh;
   }
-  // @media (max-width: $tablet) {
-  //   height: max-content;
-  // }
 }
 
 .offer {
   display: grid;
-  grid-template-columns: 55% 1fr;
+  grid-template-columns: 55% 45%;
   @media (max-width: $tablet) {
     display: flex;
     flex-direction: column;
@@ -27,7 +24,7 @@
   // .offer__desc
 
   &__desc {
-    padding-left: 15.3vw;
+    padding-left: 14.3vw;
     padding-top: 18.3vh;
     padding-right: 4vw;
     display: flex;
@@ -38,11 +35,27 @@
     }
   }
 
+  &__slider-body {
+    overflow: hidden;
+  }
+
+  &__slider-line {
+    display: flex;
+    transition: all ease 1s;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.7vh;
+  }
+
   // .offer__title
 
   &__title {
     @include h1;
     margin: 0;
+    margin-left: 1rem;
   }
 
   // .offer__tagline
@@ -50,7 +63,6 @@
   &__tagline {
     @include large-text;
     text-align: end;
-
     margin-right: 10.68vw;
   }
 
@@ -68,6 +80,7 @@
   &__button {
     @include main-text;
     color: var(--background-color);
+
     // .offer__button_scroll
 
     &_scroll {
@@ -102,6 +115,22 @@
     transition: 0.7s ease;
   }
 
+  &__slider-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    margin-top: 5vh;
+    margin-right: 10.68vw;
+  }
+
+  &__slider-click {
+    width: 30px;
+    border-top: 4px solid var(--slider-nav-color);
+    cursor: pointer;
+    margin: 6px;
+    padding: 6px;
+  }
   // .offer__pictures
 
   &__pictures {
@@ -110,16 +139,24 @@
     @media (max-width: $desktop) {
       padding-right: 13vw;
     }
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   // элемент в котором лежит большая фотография
 
   &__picture-wrap {
-    position: relative;
   }
 
   // .offer__photo
-
+  &__slider-pic-body {
+    overflow: hidden;
+  }
+  &__slider-pic-line {
+    display: flex;
+    transition: all ease 1s;
+  }
   &__photo {
     max-width: 100%;
 
@@ -127,12 +164,11 @@
 
     &_large {
       @media (max-width: $big-tablet) {
-        position: absolute;
-        top: 10vh;
+        margin-top: 10vh;
       }
       @media (max-width: $tablet) {
         max-width: 87%;
-        left: 8vw;
+        margin-left: 8vw;
       }
     }
 
@@ -142,14 +178,15 @@
       z-index: 1;
       position: absolute;
       left: 20.1vw;
-      bottom: 41.8vh;
+      bottom: 40.8vh;
       @media (max-width: $desktop) {
+        left: 22.5vw;
         bottom: 32.5vh;
         max-width: 50%;
       }
       @media (max-width: $big-tablet) {
         left: 23vw;
-        top: 21vh;
+        top: -35vh;
       }
       @media (max-width: $tablet) {
         left: 57vw;
@@ -168,7 +205,7 @@
         max-width: 60%;
       }
       @media (max-width: $big-tablet) {
-        bottom: -53.6vh;
+        bottom: -7.6vh;
         max-width: 55%;
         left: -6vw;
       }
@@ -186,4 +223,8 @@
   &__pictures-container {
     position: relative;
   }
+}
+
+#offerSlideNav1 {
+  border-color: #000;
 }

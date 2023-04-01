@@ -1,17 +1,27 @@
-import { Button } from "./classes/button.js";
-
-const offerScrollBtn = new Button("offerScrollBtn");
-const offerStoreBtn = new Button("offerStoreBtn");
-
-const arrowIcon = document.querySelector(".offer__arrow");
+import {
+  offerScrollBtn,
+  offerStoreBtn,
+  moveArrowIcon,
+  unmoveArrowIcon,
+  offerSlider,
+  offerPicSlider,
+  offerSlideNav1,
+  offerSlideNav2,
+  offerSlideNav3,
+  moveOnSliderClick,
+  autoMoveSlider,
+} from "./elements/offer.js";
 
 offerScrollBtn.onMouseOver(moveArrowIcon);
 offerScrollBtn.onMouseOut(unmoveArrowIcon);
 
-function moveArrowIcon() {
-  arrowIcon.style.top = "1.89vh";
-}
-function unmoveArrowIcon() {
-  arrowIcon.style.top = "0";
-  //   arrowIcon.style.transition = "0.7s ease";
-}
+offerSlider.init();
+window.addEventListener("resize", offerSlider.init);
+offerPicSlider.init();
+window.addEventListener("resize", offerPicSlider.init);
+
+moveOnSliderClick(offerSlideNav1, 0);
+moveOnSliderClick(offerSlideNav2, 1);
+moveOnSliderClick(offerSlideNav3, 2);
+
+autoMoveSlider();

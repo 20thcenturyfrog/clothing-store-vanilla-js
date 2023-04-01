@@ -21,6 +21,7 @@
   --old-price-color: #9c9c9c;
   --quantity-box-color: #afafaf;
   --placeholder-color: #868686;
+  --slider-nav-color: #d1d1d1;
   font-family: "Raleway";
   font-style: normal;
   font-size: 10px;
@@ -39,7 +40,7 @@
 
 .offer {
   display: grid;
-  grid-template-columns: 55% 1fr;
+  grid-template-columns: 55% 45%;
 }
 @media (max-width: 768px) {
   .offer {
@@ -48,7 +49,7 @@
   }
 }
 .offer__desc {
-  padding-left: 15.3vw;
+  padding-left: 14.3vw;
   padding-top: 18.3vh;
   padding-right: 4vw;
   display: flex;
@@ -60,6 +61,18 @@
     padding-left: 5vw;
   }
 }
+.offer__slider-body {
+  overflow: hidden;
+}
+.offer__slider-line {
+  display: flex;
+  transition: all ease 1s;
+}
+.offer__slide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5.7vh;
+}
 .offer__title {
   font-weight: 500;
   font-size: 5.5rem;
@@ -67,6 +80,7 @@
   letter-spacing: 0.02rem;
   color: var(--font-color);
   margin: 0;
+  margin-left: 1rem;
 }
 .offer__tagline {
   font-weight: 400;
@@ -135,6 +149,20 @@
   top: 0px;
   transition: 0.7s ease;
 }
+.offer__slider-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: 5vh;
+  margin-right: 10.68vw;
+}
+.offer__slider-click {
+  width: 30px;
+  border-top: 4px solid var(--slider-nav-color);
+  cursor: pointer;
+  margin: 6px;
+  padding: 6px;
+}
 .offer__pictures {
   margin-left: 3.125vw;
   padding-right: 15.9vw;
@@ -144,32 +172,41 @@
     padding-right: 13vw;
   }
 }
-.offer__picture-wrap {
-  position: relative;
+@media (max-width: 768px) {
+  .offer__pictures {
+    display: none;
+  }
+}
+.offer__slider-pic-body {
+  overflow: hidden;
+}
+.offer__slider-pic-line {
+  display: flex;
+  transition: all ease 1s;
 }
 .offer__photo {
   max-width: 100%;
 }
 @media (max-width: 1024px) {
   .offer__photo_large {
-    position: absolute;
-    top: 10vh;
+    margin-top: 10vh;
   }
 }
 @media (max-width: 768px) {
   .offer__photo_large {
     max-width: 87%;
-    left: 8vw;
+    margin-left: 8vw;
   }
 }
 .offer__photo_small {
   z-index: 1;
   position: absolute;
   left: 20.1vw;
-  bottom: 41.8vh;
+  bottom: 40.8vh;
 }
 @media (max-width: 1280px) {
   .offer__photo_small {
+    left: 22.5vw;
     bottom: 32.5vh;
     max-width: 50%;
   }
@@ -177,7 +214,7 @@
 @media (max-width: 1024px) {
   .offer__photo_small {
     left: 23vw;
-    top: 21vh;
+    top: -35vh;
   }
 }
 @media (max-width: 768px) {
@@ -199,7 +236,7 @@
 }
 @media (max-width: 1024px) {
   .offer__photo_mid {
-    bottom: -53.6vh;
+    bottom: -7.6vh;
     max-width: 55%;
     left: -6vw;
   }
@@ -213,4 +250,8 @@
 }
 .offer__pictures-container {
   position: relative;
+}
+
+#offerSlideNav1 {
+  border-color: #000;
 }
