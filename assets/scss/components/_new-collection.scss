@@ -1,0 +1,94 @@
+.new-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(60px, 9.02vw, 130px) 14.3vw;
+
+  &__title {
+    @include h2;
+    margin-bottom: clamp(60px, 5.75vw, 92px);
+    align-self: flex-start;
+
+    @media (max-width: $big-tablet) {
+      align-self: center;
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 100%;
+
+    @media (max-width: $big-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-image {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      max-height: 478px;
+      object-fit: cover;
+      object-position: center;
+      transition: 0.5s ease;
+
+      &-arrow {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--image-hover-cta-color);
+        transition: 0.5s ease;
+      }
+    }
+
+    &-name {
+      @include h4;
+      margin-top: 24px;
+    }
+
+    &-price {
+      @include price;
+      color: var(--accent-color);
+      margin-top: 10px;
+
+      &_old {
+        color: var(--old-price-color);
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    > .new-collection__item-image-arrow {
+      opacity: 0;
+    }
+
+    &:hover > .new-collection__item-image-arrow {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    @include white-button;
+    margin-top: 65px;
+
+    &:hover {
+      @include white-button-hover;
+    }
+  }
+}
