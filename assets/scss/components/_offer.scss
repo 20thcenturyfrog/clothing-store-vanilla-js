@@ -1,0 +1,230 @@
+//класс, чтобы изменить задний фон оффера и хэдера на главной странице. (хэдер должен быть внутри)
+.header-offer-wrapper {
+  background: linear-gradient(
+    90deg,
+    var(--background-color) 0%,
+    var(--background-color) 55%,
+    var(--secondary-background-color) 55%,
+    var(--secondary-background-color) 100%
+  );
+  padding-bottom: 7.6vh;
+  @media (max-width: $big-tablet) {
+    padding-bottom: 2vh;
+  }
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .offer__desc
+
+  &__desc {
+    padding-left: 14.3vw;
+    padding-top: 18.3vh;
+    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.7vh;
+    @media (max-width: $desktop) {
+      padding-left: 5vw;
+    }
+  }
+
+  &__slider-body {
+    overflow: hidden;
+  }
+
+  &__slider-line {
+    display: flex;
+    transition: all ease 1s;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.7vh;
+  }
+
+  // .offer__title
+
+  &__title {
+    @include h1;
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  // .offer__tagline
+
+  &__tagline {
+    @include large-text;
+    text-align: end;
+    margin-right: 10.68vw;
+  }
+
+  // .offer__buttons
+
+  &__buttons {
+    display: flex;
+    align-items: stretch;
+    margin-right: 10.68vw;
+    justify-content: end;
+  }
+
+  // .offer__button
+
+  &__button {
+    @include main-text;
+    color: var(--background-color);
+
+    // .offer__button_scroll
+
+    &_scroll {
+      @include white-button;
+      padding: 19.5px 26px;
+      background-color: var(--arrow-button-cta-color);
+      border-color: var(--arrow-button-cta-color);
+
+      &:hover {
+        @include white-button-hover;
+
+        background-color: var(--arrow-button-cta-color);
+      }
+    }
+
+    // .offer__button_store
+
+    &_store {
+      @include cta-button;
+
+      &:hover {
+        @include cta-button-hover;
+      }
+    }
+  }
+
+  // .offer__arrow
+
+  &__arrow {
+    position: relative;
+    top: 0px;
+    transition: 0.7s ease;
+  }
+
+  &__slider-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    margin-top: 5vh;
+    margin-right: 10.68vw;
+  }
+
+  &__slider-click {
+    width: 30px;
+    border-top: 4px solid var(--slider-nav-color);
+    cursor: pointer;
+    margin: 6px;
+    padding: 6px;
+  }
+  // .offer__pictures
+
+  &__pictures {
+    margin-left: 3.125vw;
+    padding-right: 15.9vw;
+    @media (max-width: $desktop) {
+      padding-right: 13vw;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  // элемент в котором лежит большая фотография
+
+  &__picture-wrap {
+  }
+
+  // .offer__photo
+  &__slider-pic-body {
+    overflow: hidden;
+  }
+  &__slider-pic-line {
+    display: flex;
+    transition: all ease 1s;
+  }
+  &__photo {
+    max-width: 100%;
+
+    // .offer__photo_large
+
+    &_large {
+      @media (max-width: $big-tablet) {
+        margin-top: 10vh;
+      }
+      @media (max-width: $tablet) {
+        max-width: 87%;
+        margin-left: 8vw;
+      }
+    }
+
+    // .offer__photo_small
+
+    &_small {
+      z-index: 1;
+      position: absolute;
+      left: 20.1vw;
+      bottom: 40.8vh;
+      @media (max-width: $desktop) {
+        left: 22.5vw;
+        bottom: 32.5vh;
+        max-width: 50%;
+      }
+      @media (max-width: $big-tablet) {
+        left: 23vw;
+        top: -35vh;
+      }
+      @media (max-width: $tablet) {
+        left: 57vw;
+        max-width: 41%;
+      }
+    }
+
+    // .offer__photo_mid
+
+    &_mid {
+      z-index: 1;
+      position: absolute;
+      bottom: -7.6vh;
+      left: -8.46vw;
+      @media (max-width: $desktop) {
+        max-width: 60%;
+      }
+      @media (max-width: $big-tablet) {
+        bottom: -7.6vh;
+        max-width: 55%;
+        left: -6vw;
+      }
+      @media (max-width: $tablet) {
+        max-width: 40%;
+        bottom: -71.6vh;
+
+        left: -1vw;
+      }
+    }
+  }
+
+  // элемент в котором лежат фотографии поменьше
+
+  &__pictures-container {
+    position: relative;
+  }
+}
+
+#offerSlideNav1 {
+  border-color: #000;
+}
