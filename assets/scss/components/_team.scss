@@ -1,0 +1,152 @@
+// стили для блока
+.team {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    padding-left: 238px;
+    max-width: 1600px;
+    padding-right: 238px;
+}
+
+h2 {
+    @include h2;
+    font-family: 'Railway', sans-serif;
+    padding-left: 238px;
+}
+
+h3 {
+    @include h3;
+    font-family: 'Railway', sans-serif;
+}
+
+p {
+    @include main-text;
+    font-family: 'Railway', sans-serif;
+}
+
+#aboutbrand:hover {
+    @include menu-hover;
+    font-family: 'Railway', sans-serif;
+}
+
+.team__info {
+    display: grid;
+    padding-left: 124px;
+}
+
+.slide>img {
+    max-width: 768px;
+}
+
+@media (max-width: 1280px) {
+
+    .team {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+
+
+}
+
+@media (max-width: 368px) {
+    .slide>img {
+        max-width: 300px;
+    }
+
+    .team {
+        padding: 0;
+    }
+}
+
+
+// стили для слайдера
+/*.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+    text-align: center;
+}
+
+img {
+    max-width: 550px;
+    max-height: 480px;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    padding: 15px 10px;
+    border-radius: 5px;
+
+}
+
+.controls:hover {
+    background: white;
+    transition: 0.3s;
+}
+
+.controls:active {
+    color: grey;
+}
+
+#left-arrow {
+    left: 5px;
+}
+
+#right-arrow {
+    right: 5px;
+}
+
+#dots-con {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    background: grey;
+    border-radius: 10%;
+    width: 30px;
+    height: 4px;
+    margin: 10px 5px;
+}
+
+.active {
+    background: grey;
+}
+
+@media (max-width:576px) {
+    .slider-container {
+        width: 100%;
+
+    }
+
+    .controls {
+        font-size: 1em;
+    }
+
+    #dots-con {
+        display: none;
+    }
+} */
