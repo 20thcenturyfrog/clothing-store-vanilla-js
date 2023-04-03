@@ -1,0 +1,87 @@
+.footer {
+  background-color: var(--secondary-background-color);
+  display: flex;
+  padding: 13.1vh 16vw;
+  justify-content: flex-start;
+  margin-bottom: auto;
+  @include menu;
+
+  // .footer__logo
+
+  &__logo {
+    @include footer-text;
+    margin-right: 5.18vw;
+  }
+
+  // .footer__logo-img
+
+  &__logo-img {
+    max-width: 100%;
+    margin-bottom: 8.8vh;
+  }
+
+  // .footer__nav
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    row-gap: 4.92vh;
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 2.9vw;
+  }
+
+  // .footer__link
+
+  &__link {
+    color: var(--font-color);
+    padding-bottom: 3px;
+    &:hover {
+      @include menu-hover;
+    }
+  }
+
+  // .footer__clothing-links
+
+  &__clothing-links {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  // .footer__clothing-link
+
+  &__clothing-link {
+    width: min-content;
+    @include footer-text;
+    &:hover {
+      @include menu-hover;
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+    margin-left: auto;
+  }
+
+  // .footer__tel
+
+  &__tel {
+  }
+
+  // .footer__email
+
+  &__email {
+  }
+
+  // .footer__social-icons
+
+  &__social-icons {
+  }
+
+  // .footer__visa
+
+  &__visa {
+  }
+}

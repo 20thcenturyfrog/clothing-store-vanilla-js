@@ -158,6 +158,7 @@
 @mixin menu-hover {
   font-weight: 700;
   color: var(--cta-color);
+  border-bottom: 1px solid var(--link-underline-color);
   transition: 0.5s ease;
   cursor: pointer;
 }

@@ -4,3 +4,10 @@
 @import "./components/tech";
 
 @import "./components/offer";
+
+@import "./components/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
