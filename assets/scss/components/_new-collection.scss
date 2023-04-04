@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: clamp(60px, 9.02vw, 130px) 14.3vw;
 
   &__title {
@@ -12,17 +11,57 @@
 
     @media (max-width: $big-tablet) {
       align-self: center;
+      text-align: center;
     }
   }
 
-  &__item-container {
+  &__slider-arrow-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    max-width: 100%;
+    width: 100%;
+  }
+
+  &__slider-side-arrow {
+    display: none;
 
     @media (max-width: $big-tablet) {
-      flex-direction: column;
+      display: block;
+      width: 28px;
+      margin: 0 50px;
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__slider-bottom-arrows {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: clamp(50px, 4vw, 65px);
+    }
+  }
+
+  &__slider-bottom-arrow {
+    width: 28px;
+  }
+
+  &__slider-body {
+    overflow: hidden;
+  }
+
+  &__slider-line {
+    display: flex;
+    transition: all ease 1s;
+
+    @media (min-width: 1025px) {
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 100%;
     }
   }
 
@@ -85,7 +124,8 @@
 
   &__button {
     @include white-button;
-    margin-top: 65px;
+    margin-top: clamp(50px, 4vw, 65px);
+    align-self: center;
 
     &:hover {
       @include white-button-hover;
