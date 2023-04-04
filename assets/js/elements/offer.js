@@ -31,9 +31,9 @@ const offerSlideNav3 = document.getElementById("offerSlideNav3");
 function moveOnSliderClick(sliderBtn, number) {
   sliderBtn.addEventListener("click", function (evt) {
     offerPicSlider.elCount = number - 1;
-    offerPicSlider.moveSlider();
+    offerPicSlider.moveSliderForward();
     offerSlider.elCount = number - 1;
-    offerSlider.moveSlider();
+    offerSlider.moveSliderForward();
     changeSliderColors();
     evt.target.style.borderColor = "#000000";
   });
@@ -61,8 +61,8 @@ function checkColor() {
 
 function autoMoveSlider() {
   setInterval(function () {
-    offerSlider.moveSlider();
-    offerPicSlider.moveSlider();
+    offerSlider.moveSliderForward();
+    offerPicSlider.moveSliderForward();
     checkColor();
   }, 5000);
 }
