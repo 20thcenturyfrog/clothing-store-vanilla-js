@@ -3,6 +3,10 @@ export class Button {
 
   constructor(id) {
     this.elLink = document.getElementById(id);
+    this.onClick = this.onClick.bind(this);
+    this.onMouseOver = this.onMouseOver.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
+    this.attachLink = this.attachLink.bind(this);
   }
 
   onClick(clickCallback) {
@@ -15,5 +19,11 @@ export class Button {
 
   onMouseOut(mouseOutCallback) {
     this.elLink.addEventListener("mouseout", mouseOutCallback);
+  }
+
+  attachLink(linkString) {
+    this.onClick(function () {
+      location = linkString;
+    });
   }
 }
