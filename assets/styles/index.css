@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: 55% 45%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .offer {
     display: flex;
     flex-direction: column;
@@ -172,7 +172,7 @@
     padding-right: 13vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .offer__pictures {
     display: none;
   }
@@ -192,7 +192,7 @@
     margin-top: 10vh;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .offer__photo_large {
     max-width: 87%;
     margin-left: 8vw;
@@ -217,7 +217,7 @@
     top: -35vh;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .offer__photo_small {
     left: 57vw;
     max-width: 41%;
@@ -241,7 +241,7 @@
     left: -6vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .offer__photo_mid {
     max-width: 40%;
     bottom: -71.6vh;
@@ -292,7 +292,7 @@
     margin: 0 50px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .new-collection__slider-side-arrow {
     display: none;
   }
@@ -300,7 +300,7 @@
 .new-collection__slider-bottom-arrows {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .new-collection__slider-bottom-arrows {
     display: flex;
     justify-content: space-around;
@@ -422,6 +422,15 @@
   .footer {
     justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 3vh;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    padding: 5vh 10vw;
   }
 }
 .footer__logo {
@@ -441,6 +450,7 @@
   .footer__logo {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-right: 0;
   }
 }
@@ -452,6 +462,11 @@
 @media (max-width: 1024px) {
   .footer__logo-img {
     max-width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo-img {
+    margin-bottom: 2vh;
   }
 }
 .footer__info {
@@ -510,6 +525,12 @@
   margin-left: auto;
   text-align: end;
 }
+@media (max-width: 1024px) {
+  .footer__socials {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer__tel-email {
   display: flex;
   flex-direction: column;
@@ -526,6 +547,9 @@
   transition: 0.5s ease;
   cursor: pointer;
   font-weight: 400;
+}
+.footer__tel {
+  padding-top: 0;
 }
 .footer__email {
   padding-top: 1.14vh;
