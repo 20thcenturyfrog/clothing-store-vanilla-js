@@ -563,6 +563,11 @@
 .footer__social-icons img {
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .footer__social-icons {
+    column-gap: 3vw;
+  }
+}
 .footer__visa {
   display: flex;
   justify-content: end;

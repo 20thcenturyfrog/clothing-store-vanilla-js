@@ -154,6 +154,9 @@
     & img {
       cursor: pointer;
     }
+    @media (max-width: $tablet) {
+      column-gap: 3vw;
+    }
   }
 
   // .footer__visa
