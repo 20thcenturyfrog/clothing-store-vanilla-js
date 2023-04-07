@@ -1,0 +1,34 @@
+.product-name {
+  // .product-name__title
+
+  &__title {
+    @include h1;
+  }
+}
+.breadcrumbs {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 13px;
+  @include main-text;
+
+  // .breadcrumbs__link
+
+  &__link {
+    color: var(--font-color);
+    // .breadcrumbs__link_1
+
+    &_1 {
+    }
+
+    // .breadcrumbs__link_2
+
+    &_2 {
+    }
+  }
+
+  // .breadcrumbs__current-page
+
+  &__current-page {
+    color: var(--section-color);
+  }
+}

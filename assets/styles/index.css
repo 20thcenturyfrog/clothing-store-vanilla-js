@@ -400,3 +400,27 @@
   transition: 0.5s ease;
   cursor: pointer;
 }
+
+.product-name__title {
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 13px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+}
+.breadcrumbs__link {
+  color: var(--font-color);
+}
+.breadcrumbs__current-page {
+  color: var(--section-color);
+}
