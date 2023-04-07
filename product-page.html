@@ -20,6 +20,50 @@
           <p class="breadcrumbs__current-page">Свитшот Sweet Shot</p>
         </div>
       </section>
+      <div class="product">
+        <img
+          class="product__img"
+          src="./assets/images/item-3.jpg"
+          alt="brand clothing item" />
+        <div class="product__info">
+          <p class="product__price">
+            <span class="product__price_new">$311</span
+            ><span class="product__price_old">$450</span>
+          </p>
+        </div>
+        <div class="product__size">
+          <p class="product__size-label">Выберите размер</p>
+          <div class="product__size-options">
+            <button id="sizeXS" class="product__size-btn">XS</button>
+            <button id="sizeS" class="product__size-btn">S</button>
+            <button id="sizeM" class="product__size-btn">M</button>
+            <button id="sizeL" class="product__size-btn">L</button>
+            <button id="sizeXL" class="product__size-btn">XL</button>
+          </div>
+        </div>
+        <div class="product__color">
+          <p class="product__color-label">Выберите цвет</p>
+          <div class="product__color-options">
+            <div id="productColor1" class="product__color-option"></div>
+            <div id="productColor2" class="product__color-option"></div>
+            <div id="productColor3" class="product__color-option"></div>
+            <div id="productColor4" class="product__color-option"></div>
+          </div>
+        </div>
+        <div class="product__checkout">
+          <input
+            class="product__quantity-input"
+            name="productQuantity"
+            min="1"
+            max="10"
+            type="number"
+            step="1"
+            value="1" />
+          <button id="productAddToCartBtn" class="product__add-btn">
+            Добавить в корзину
+          </button>
+        </div>
+      </div>
     </main>
     <script src="./assets/js/index.js" type="module"></script>
   </body>
