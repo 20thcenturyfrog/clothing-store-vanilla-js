@@ -20,7 +20,22 @@ import {
   nextSlideBottomArrow,
 } from "./elements/new-collection.js";
 
+import {
+  footerLogoImg,
+  footerPrivacyPolicy,
+  footerPublicOffer,
+  footerTel,
+  footerEmail,
+  footerInstagramIcon,
+  footerFacebookIcon,
+  footerTwitterIcon,
+  footerVisaImg,
+} from "./elements/footer.js";
+
 // Offer
+
+offerScrollBtn.attachLink("#");
+offerStoreBtn.attachLink("#");
 
 offerScrollBtn.onMouseOver(moveArrowIcon);
 offerScrollBtn.onMouseOut(unmoveArrowIcon);
@@ -57,3 +72,15 @@ nextSlideBottomArrow.addEventListener(
   "click",
   newCollectionSlider.moveSliderForward
 );
+
+// Footer
+
+footerLogoImg.attachLink("#");
+footerPrivacyPolicy.attachLink("#");
+footerPublicOffer.attachLink("#");
+footerTel.attachLink("#");
+footerEmail.attachLink("#");
+footerInstagramIcon.attachLink("#");
+footerFacebookIcon.attachLink("#");
+footerTwitterIcon.attachLink("#");
+footerVisaImg.attachLink("#");
