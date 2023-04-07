@@ -8,3 +8,10 @@
 @import "./components/new-collection";
 
 @import "./components/product-page";
+
+@import "./components/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
