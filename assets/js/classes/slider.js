@@ -7,7 +7,8 @@ export class SliderBody {
     this.sliderLine = document.querySelector(`.${lineClass}`);
     this.slideArray = document.querySelectorAll(`.${slidesClass}`);
     this.init = this.init.bind(this);
-    this.moveSlider = this.moveSlider.bind(this);
+    this.moveSliderForward = this.moveSliderForward.bind(this);
+    this.moveSliderBackward = this.moveSliderBackward.bind(this);
     this.roll = this.roll.bind(this);
   }
 
@@ -20,18 +21,22 @@ export class SliderBody {
     });
     this.roll();
   }
-  moveSlider() {
+  moveSliderForward() {
     this.elCount++;
     if (this.elCount >= this.slideArray.length) {
       this.elCount = 0;
     }
+    this.roll();
+  }
+  moveSliderBackward() {
+    this.elCount--;
     if (this.elCount < 0) {
-      this.elCount = this.slideArray.length;
+      this.elCount = this.slideArray.length - 1;
     }
     this.roll();
   }
   roll() {
     this.sliderLine.style.transform =
-      "translate(-" + this.elCount * this.elWidth + "px";
+      "translate(-" + this.elCount * this.elWidth + "px)";
   }
 }

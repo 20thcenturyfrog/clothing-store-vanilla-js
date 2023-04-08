@@ -5,4 +5,13 @@
 
 @import "./components/offer";
 
+@import "./components/new-collection";
+
+@import "./components/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 @import "./components/team";
