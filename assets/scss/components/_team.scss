@@ -1,8 +1,8 @@
 // стили для блока
 .team {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    padding-left: 238px;
+    grid-template-columns: 2fr 1fr;
+    padding-left: 150px;
     max-width: 1600px;
     padding-right: 238px;
 }
@@ -33,9 +33,6 @@ p {
     padding-left: 124px;
 }
 
-.slide>img {
-    max-width: 768px;
-}
 
 @media (max-width: 1280px) {
 
@@ -45,23 +42,16 @@ p {
         padding: 30px;
     }
 
-
-
-}
-
-@media (max-width: 368px) {
-    .slide>img {
-        max-width: 300px;
+    h2 {
+        padding-left: 30px;
+        text-align: center;
     }
 
-    .team {
-        padding: 0;
-    }
 }
 
 
 // стили для слайдера
-/*.slider-container {
+.slider-container {
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -78,7 +68,7 @@ p {
 }
 
 img {
-    max-width: 550px;
+    max-width: 700px;
     max-height: 480px;
 }
 
@@ -112,11 +102,11 @@ img {
 }
 
 #left-arrow {
-    left: 5px;
+    left: 1px;
 }
 
 #right-arrow {
-    right: 5px;
+    right: 1px;
 }
 
 #dots-con {
@@ -133,13 +123,16 @@ img {
 }
 
 .active {
-    background: grey;
+    background: rgb(0, 0, 0);
 }
 
 @media (max-width:576px) {
     .slider-container {
-        width: 100%;
+        display: none;
+    }
 
+    #slide {
+        display: block;
     }
 
     .controls {
@@ -149,4 +142,19 @@ img {
     #dots-con {
         display: none;
     }
-} */
+
+    h2 {
+        padding: 10px;
+        font-size: 3wv;
+    }
+
+    .team {
+        padding: 0;
+    }
+
+    .team__info {
+        display: grid;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

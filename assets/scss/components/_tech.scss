@@ -6,8 +6,7 @@
 @font-face {
   font-family: "Raleway";
   src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
-  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
-      format("embedded-opentype"),
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot") format("embedded-opentype"),
     url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
     url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
     url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
@@ -15,6 +14,8 @@
   font-weight: 300 800;
   font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 // В SCSS эти переменные можно использовать, например, так:
 // color: var(--font-color);
