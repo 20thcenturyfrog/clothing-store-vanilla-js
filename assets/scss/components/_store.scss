@@ -32,27 +32,34 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-between;
     row-gap: 65px;
     margin-bottom: 65px;
+    width: 100%;
+
+    @media (max-width: 1350px) {
+      grid-template-columns: repeat(2, 300px);
+    }
 
     @media (max-width: $big-tablet) {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 530px 1fr 0.5fr;
+    justify-items: center;
     justify-content: center;
-    align-items: center;
 
     &-image {
       display: block;
-      width: 100%;
-      max-width: 350px;
-      max-height: 478px;
+      max-width: 300px;
       object-fit: cover;
       object-position: center;
       transition: 0.5s ease;
@@ -71,6 +78,7 @@
     &-name {
       @include h4;
       margin-top: 24px;
+      text-align: center;
     }
 
     &-price {
@@ -120,6 +128,12 @@
     margin-bottom: 65px;
   }
 
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__page-buttons {
     display: flex;
     justify-content: center;
@@ -141,5 +155,33 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  &__error-message {
+    @include main-text;
+    align-self: center;
+  }
+}
+#loading {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid var(--slider-nav-color);
+  border-top: 6px solid var(--cta-color);
+  border-radius: 100%;
+  margin: 40px auto;
+  display: none;
+  animation: spin 1s infinite linear;
+
+  &.display {
+    display: block;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
