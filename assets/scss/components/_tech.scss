@@ -30,8 +30,8 @@
 // --button-hover-color — цвет для кнопки при наведении, если в обычном состоянии она окрашена в цвет CTA.
 // --link-underline-color: — цвет для линии, которая подчёркивает ссылку при наведении.
 // --accent-color — цвет для цен и иконки с кол-вом товаров в корзине в хедере.
-// --section-color — цвет для названия раздела, в котором мы находимся (например, Главная — Магазин: здесь этим цветом будет окрашен "Магазин".)
-// --goods-on-page-color — этим цветом окрашены фразы типа "Показано: 9 из 12 товаров".
+// --current-path-color — цвет для названия раздела, в котором мы находимся (например, Главная — Магазин: здесь этим цветом будет окрашен "Магазин".)
+// --items-on-page-color — этим цветом окрашены фразы типа "Показано: 9 из 12 товаров".
 // --old-price-color — цвет для старой (вычеркнутой) цены. Не факт, что понадобится, но пусть будет.
 // --quantity-box-color — цвет рамки квадрата на странице товара, в котором указано кол-во.
 // --placeholder-color — цвет для плейсхолдера в формах.
@@ -49,8 +49,8 @@
   --button-hover-color: #509498;
   --link-underline-color: #cededf;
   --accent-color: #998e78;
-  --section-color: #909090;
-  --goods-on-page-color: #808080;
+  --current-path-color: #909090;
+  --items-on-page-color: #808080;
   --old-price-color: #9c9c9c;
   --quantity-box-color: #afafaf;
   --placeholder-color: #868686;
@@ -65,7 +65,7 @@
 
 @mixin h1 {
   font-weight: 500;
-  font-size: 5.5rem;
+  font-size: clamp(4rem, 6vw, 5.5rem);
   line-height: 110%;
   letter-spacing: 0.02rem;
   color: var(--font-color);
@@ -217,6 +217,56 @@
   color: var(--background-color);
   background-color: var(--button-hover-color);
   border: 1px solid var(--button-hover-color);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+// Кнопка для фильтра по типу товаров
+
+@mixin filter-button {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--font-color);
+  background-color: #ffffff;
+  border: 1px solid var(--font-color);
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+// Кнопка для фильтра по типу товаров — поведение при наведении
+
+@mixin filter-button-hover {
+  color: #ffffff;
+  background-color: var(--font-color);
+  border: 1px solid var(--font-color);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+// Кнопка для страниц
+
+@mixin page-button {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  color: var(--font-color);
+  background-color: #ffffff;
+  border: 1px solid var(--font-color);
+  width: 41px;
+  height: 41px;
+}
+
+// Кнопка для страниц — поведение при наведении
+
+@mixin page-button-hover {
+  color: #ffffff;
+  background-color: var(--font-color);
+  border: 1px solid var(--font-color);
   transition: 0.5s ease;
   cursor: pointer;
 }

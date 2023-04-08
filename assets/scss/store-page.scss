@@ -1,0 +1,10 @@
+@import "./components/tech";
+
+@import "./components/store";
+
+@import "./components/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
