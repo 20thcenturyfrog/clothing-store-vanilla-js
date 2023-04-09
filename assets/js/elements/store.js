@@ -1,4 +1,5 @@
 import { Product } from "../classes/products.js";
+import { footerStoreLink } from "./footer.js";
 
 const filterButtons = document.querySelectorAll(".products__filter-button");
 const allItemsFilterBtn = document.getElementById("allItemsFilterBtn");
@@ -23,6 +24,13 @@ async function fetchProducts(url) {
     hideLoading();
     allItemsFilterBtn.classList.add("products__filter-button_active");
     pageButtonOne.classList.add("products__page-button_active");
+    document
+      .getElementById("footerStoreLink")
+      .classList.add("footer__link_active");
+
+    document.querySelectorAll(".footer__clothing-link").forEach((link) => {
+      link.classList.remove("footer__clothing-link_active");
+    });
   } catch (error) {
     const errorMessage = document.createElement("p");
     errorMessage.className = "products__error-message";
@@ -61,17 +69,49 @@ async function fetchFilteredProducts(url) {
 }
 
 function filterProducts() {
+  document.querySelectorAll(".footer__clothing-link").forEach((link) => {
+    link.classList.remove("footer__clothing-link_active");
+    if (link.id === this.id) {
+      link.classList.add("footer__clothing-link_active");
+    }
+  });
   const allButtons = [...this.parentElement.children];
   const btnSiblings = allButtons.filter((btn) => btn !== this);
   for (const i in btnSiblings) {
     btnSiblings[i].classList.remove("products__filter-button_active");
   }
+  document
+    .getElementById("footerStoreLink")
+    .classList.remove("footer__link_active");
   allItems.innerHTML = "";
   fetchFilteredProducts(
     `https://fakestoreapi.com/products/category/${this.id}`
   );
   displayLoading();
   this.classList.add("products__filter-button_active");
+}
+
+function filterProductsByLinks() {
+  filterButtons.forEach((btn) => {
+    btn.classList.remove("products__filter-button_active");
+    if (btn.id === this.id) {
+      btn.classList.add("products__filter-button_active");
+    }
+  });
+  const allLinks = [...this.parentElement.children];
+  const linkSiblings = allLinks.filter((link) => link !== this);
+  for (const i in linkSiblings) {
+    linkSiblings[i].classList.remove("footer__clothing-link_active");
+  }
+  document
+    .getElementById("footerStoreLink")
+    .classList.remove("footer__link_active");
+  allItems.innerHTML = "";
+  fetchFilteredProducts(
+    `https://fakestoreapi.com/products/category/${this.id}`
+  );
+  displayLoading();
+  this.classList.add("footer__clothing-link_active");
 }
 
 function displayLoading() {
@@ -87,5 +127,6 @@ export {
   allItemsFilterBtn,
   fetchProducts,
   filterProducts,
+  filterProductsByLinks,
   displayLoading,
 };

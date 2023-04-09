@@ -801,6 +801,7 @@ nav > ul > li:hover {
   column-gap: 2.9vw;
 }
 .footer__link {
+  width: min-content;
   color: var(--font-color);
   padding-bottom: 3px;
   border: 1px solid transparent;
@@ -839,6 +840,10 @@ nav > ul > li:hover {
   transition: 0.5s ease;
   cursor: pointer;
   font-weight: 400;
+}
+.footer__clothing-link_active {
+  color: var(--cta-color);
+  font-weight: 700;
 }
 .footer__socials {
   margin-left: auto;

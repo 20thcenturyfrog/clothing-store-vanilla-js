@@ -2,9 +2,10 @@ import { headerMainPageLink, headerStoreLink } from "./elements/header.js";
 
 import {
   filterButtons,
-  filterProducts,
   allItemsFilterBtn,
   fetchProducts,
+  filterProducts,
+  filterProductsByLinks,
   displayLoading,
 } from "./elements/store.js";
 
@@ -20,6 +21,7 @@ import {
   footerVisaImg,
   footerMainPageLink,
   footerStoreLink,
+  footerFilterLinks,
 } from "./elements/footer.js";
 
 // Header
@@ -57,3 +59,7 @@ footerTwitterIcon.attachLink("#");
 footerVisaImg.attachLink("#");
 footerMainPageLink.attachLink("index.html");
 footerStoreLink.attachLink("store.html");
+
+footerFilterLinks.forEach((link) => {
+  link.addEventListener("click", filterProductsByLinks);
+});
