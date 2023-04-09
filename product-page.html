@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="/assets/styles/product-page.css" />
   </head>
   <body>
+    <header>
+      <div class="container">
+        <div class="container__logo">
+          <img src="./assets/images/logo-with-text.svg" alt="logo" />
+        </div>
+        <div class="container__nav">
+          <nav>
+            <ul>
+              <li id="headerMainPageLink">Главная</li>
+              <li id="headerStoreLink">Магазин</li>
+              <li>О бренде</li>
+              <li>Контакты</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="container__phone">
+          <div><img src="./assets/images/telephone.svg" alt="phone" /></div>
+          <p>
+            <span class="container__phone_num">+7 (495) 823-54-12</span>
+          </p>
+        </div>
+        <div class="container__basket">
+          <img src="./assets/images/cart.svg" alt="shopping-bag" />
+        </div>
+      </div>
+    </header>
     <main class="single-product-page">
       <section class="product-name">
         <h1 class="product-name__title">Свитшот Sweet Shot</h1>
@@ -24,7 +50,8 @@
         <img
           class="product__img"
           src="./assets/images/big-product-pic.jpg"
-          alt="brand clothing item" />
+          alt="brand clothing item"
+        />
         <div class="product__desc">
           <div class="product__info">
             <p class="product__price">
@@ -59,7 +86,8 @@
               max="10"
               type="number"
               step="1"
-              value="1" />
+              value="1"
+            />
             <button id="productAddToCartBtn" class="product__add-btn">
               Добавить в корзину
             </button>
@@ -77,7 +105,8 @@
           class="footer__logo-img"
           id="footerLogoImg"
           src="./assets/images/logo-with-text.svg"
-          alt="Womazing" />
+          alt="Womazing"
+        />
         <div class="footer__info">
           <p>© Все права защищены</p>
           <p id="privacyPolicy">Политика конфиденциальности</p>
@@ -85,15 +114,15 @@
         </div>
       </div>
       <div class="footer__nav">
-        <a class="footer__link" href="#">Главная</a>
-        <a class="footer__link" href="#">Магазин</a>
-        <a class="footer__link" href="#">О&nbsp;бренде</a>
-        <a class="footer__link" href="#">Контакты</a>
+        <a class="footer__link" id="footerMainPageLink">Главная</a>
+        <a class="footer__link" id="footerStoreLink">Магазин</a>
+        <a class="footer__link">О&nbsp;бренде</a>
+        <a class="footer__link">Контакты</a>
         <div class="footer__clothing-links">
-          <a class="footer__clothing-link" href="#">Пальто</a>
-          <a class="footer__clothing-link" href="#">Свитшоты</a>
-          <a class="footer__clothing-link" href="#">Кардиганы</a>
-          <a class="footer__clothing-link" href="#">Толстовки</a>
+          <a class="footer__clothing-link">Пальто</a>
+          <a class="footer__clothing-link">Свитшоты</a>
+          <a class="footer__clothing-link">Кардиганы</a>
+          <a class="footer__clothing-link">Толстовки</a>
         </div>
       </div>
       <div class="footer__socials">
@@ -105,21 +134,25 @@
           <img
             id="footerInstagramIcon"
             src="./assets/images/instagram.svg"
-            alt="instagram icon" />
+            alt="instagram icon"
+          />
           <img
             id="footerFacebookIcon"
             src="./assets/images/facebook.svg"
-            alt="facebook icon" />
+            alt="facebook icon"
+          />
           <img
             id="footerTwitterIcon"
             src="./assets/images/twitter.svg"
-            alt="twitter icon" />
+            alt="twitter icon"
+          />
         </div>
         <div class="footer__visa">
           <img
             id="footerVisaImg"
             src="./assets/images/visa-mastercard.svg"
-            alt="" />
+            alt=""
+          />
         </div>
       </div>
     </footer>

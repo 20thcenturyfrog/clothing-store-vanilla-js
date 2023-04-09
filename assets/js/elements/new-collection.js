@@ -1,4 +1,7 @@
+import { Button } from "../classes/button.js";
 import { SliderBody } from "../classes/slider.js";
+
+const newCollectionBtn = new Button("newCollectionBtn");
 
 const newCollectionSlider = new SliderBody(
   "new-collection__slider-body",
@@ -20,6 +23,7 @@ const nextSlideBottomArrow = document.getElementById(
 );
 
 export {
+  newCollectionBtn,
   newCollectionSlider,
   prevSlideSideArrow,
   nextSlideSideArrow,

@@ -1,3 +1,5 @@
+import { headerMainPageLink, headerStoreLink } from "./elements/header.js";
+
 import {
   footerLogoImg,
   footerPrivacyPolicy,
@@ -8,6 +10,8 @@ import {
   footerFacebookIcon,
   footerTwitterIcon,
   footerVisaImg,
+  footerMainPageLink,
+  footerStoreLink,
 } from "./elements/footer.js";
 
 import {
@@ -18,9 +22,14 @@ import {
   addToCartBtn,
 } from "./elements/product.js";
 
+// Header
+
+headerMainPageLink.attachLink("index.html");
+headerStoreLink.attachLink("store.html");
+
 //footer
 
-footerLogoImg.attachLink("#");
+footerLogoImg.attachLink("index.html");
 footerPrivacyPolicy.attachLink("#");
 footerPublicOffer.attachLink("#");
 footerTel.attachLink("#");
@@ -29,6 +38,8 @@ footerInstagramIcon.attachLink("#");
 footerFacebookIcon.attachLink("#");
 footerTwitterIcon.attachLink("#");
 footerVisaImg.attachLink("#");
+footerMainPageLink.attachLink("index.html");
+footerStoreLink.attachLink("store.html");
 
 //product page
 

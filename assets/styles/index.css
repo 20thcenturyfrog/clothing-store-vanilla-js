@@ -87,13 +87,7 @@ nav > ul > li {
   color: var(--font-color);
 }
 
-nav > ul > li > a {
-  text-decoration: none;
-  color: black;
-}
-
-nav > ul > li > a:hover {
-  font-weight: 700;
+nav > ul > li:hover {
   color: var(--cta-color);
   border-bottom: 1px solid var(--link-underline-color);
   transition: 0.5s ease;
@@ -111,7 +105,6 @@ nav > ul > li > a:hover {
   color: var(--font-color);
 }
 .container__phone_num:hover {
-  font-weight: 700;
   color: var(--cta-color);
   border-bottom: 1px solid var(--link-underline-color);
   transition: 0.5s ease;
@@ -367,7 +360,8 @@ nav > ul > li > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(90px, 9.02vw, 130px) 14.3vw;
+  padding: 0 14.3vw clamp(90px, 9.02vw, 130px) 14.3vw;
+  margin-top: clamp(90px, 9.02vw, 130px);
 }
 .new-collection__title {
   font-weight: 500;
@@ -543,9 +537,15 @@ nav > ul > li > a:hover {
   }
 }
 
-#aboutbrand:hover {
-  font-weight: 700;
+#aboutbrand {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
   color: var(--cta-color);
+}
+
+#aboutbrand:hover {
   border-bottom: 1px solid var(--link-underline-color);
   transition: 0.5s ease;
   cursor: pointer;
