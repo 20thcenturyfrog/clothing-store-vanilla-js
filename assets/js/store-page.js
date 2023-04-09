@@ -1,6 +1,12 @@
 import { headerMainPageLink, headerStoreLink } from "./elements/header.js";
 
-import { fetchProducts, displayLoading } from "./elements/store.js";
+import {
+  filterButtons,
+  filterProducts,
+  allItemsFilterBtn,
+  fetchProducts,
+  displayLoading,
+} from "./elements/store.js";
 
 import {
   footerLogoImg,
@@ -22,6 +28,16 @@ headerMainPageLink.attachLink("index.html");
 headerStoreLink.attachLink("store.html");
 
 // Store
+
+filterButtons.forEach((filterBtn) => {
+  filterBtn.addEventListener("click", filterProducts);
+});
+
+allItemsFilterBtn.addEventListener("click", function () {
+  allItems.innerHTML = "";
+  fetchProducts("https://fakestoreapi.com/products");
+  displayLoading();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   fetchProducts("https://fakestoreapi.com/products");
