@@ -1,8 +1,9 @@
 import { Product } from "../classes/products.js";
-import { footerStoreLink } from "./footer.js";
+import { footerFilterLinks } from "./footer.js";
 
 const filterButtons = document.querySelectorAll(".products__filter-button");
 const allItemsFilterBtn = document.getElementById("allItemsFilterBtn");
+const footerStore = document.getElementById("footerStoreLink");
 const pageButtonOne = document.getElementById("pageBtn1");
 const productsSection = document.getElementById("productsSection");
 const loader = document.getElementById("loading");
@@ -24,11 +25,9 @@ async function fetchProducts(url) {
     hideLoading();
     allItemsFilterBtn.classList.add("products__filter-button_active");
     pageButtonOne.classList.add("products__page-button_active");
-    document
-      .getElementById("footerStoreLink")
-      .classList.add("footer__link_active");
+    footerStore.classList.add("footer__link_active");
 
-    document.querySelectorAll(".footer__clothing-link").forEach((link) => {
+    footerFilterLinks.forEach((link) => {
       link.classList.remove("footer__clothing-link_active");
     });
   } catch (error) {
@@ -69,7 +68,7 @@ async function fetchFilteredProducts(url) {
 }
 
 function filterProducts() {
-  document.querySelectorAll(".footer__clothing-link").forEach((link) => {
+  footerFilterLinks.forEach((link) => {
     link.classList.remove("footer__clothing-link_active");
     if (link.id === this.id) {
       link.classList.add("footer__clothing-link_active");
@@ -80,9 +79,7 @@ function filterProducts() {
   for (const i in btnSiblings) {
     btnSiblings[i].classList.remove("products__filter-button_active");
   }
-  document
-    .getElementById("footerStoreLink")
-    .classList.remove("footer__link_active");
+  footerStore.classList.remove("footer__link_active");
   allItems.innerHTML = "";
   fetchFilteredProducts(
     `https://fakestoreapi.com/products/category/${this.id}`
@@ -103,9 +100,7 @@ function filterProductsByLinks() {
   for (const i in linkSiblings) {
     linkSiblings[i].classList.remove("footer__clothing-link_active");
   }
-  document
-    .getElementById("footerStoreLink")
-    .classList.remove("footer__link_active");
+  footerStore.classList.remove("footer__link_active");
   allItems.innerHTML = "";
   fetchFilteredProducts(
     `https://fakestoreapi.com/products/category/${this.id}`
