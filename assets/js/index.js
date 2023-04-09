@@ -84,3 +84,21 @@ footerInstagramIcon.attachLink("#");
 footerFacebookIcon.attachLink("#");
 footerTwitterIcon.attachLink("#");
 footerVisaImg.attachLink("#");
+
+// функция для слайдера "команда"
+import {
+  slides,
+  dots,
+  arrowLeft,
+  arrowRight,
+  index,
+  prevSlideMove,
+  nextSlideMove,
+  changeSlider,
+} from "./elements/team.js"
+
+
+
+arrowLeft.addEventListener('click', prevSlideMove);
+arrowRight.addEventListener('click', nextSlideMove);
+changeSlider();
