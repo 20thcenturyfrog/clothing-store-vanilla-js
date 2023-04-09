@@ -96,10 +96,8 @@
 .products__item-image {
   display: block;
   max-width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: 0.5s ease;
 }
 .products__item-image-arrow {
@@ -320,8 +318,7 @@
   grid-template-columns: repeat(4, min-content);
   row-gap: 4.92vh;
   grid-template-rows: repeat(2, min-content);
-  -moz-column-gap: 2.9vw;
-       column-gap: 2.9vw;
+  column-gap: 2.9vw;
 }
 .footer__link {
   color: var(--font-color);
@@ -347,7 +344,6 @@
   row-gap: 10px;
 }
 .footer__clothing-link {
-  width: -moz-min-content;
   width: min-content;
   font-weight: 400;
   font-size: 1.3rem;
@@ -381,7 +377,6 @@
 }
 .footer__tel, .footer__email {
   border: 1px solid transparent;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .footer__tel:hover, .footer__email:hover {
@@ -401,8 +396,7 @@
 .footer__social-icons {
   display: flex;
   justify-content: end;
-  -moz-column-gap: 0.78vw;
-       column-gap: 0.78vw;
+  column-gap: 0.78vw;
   padding: 3.79vh 0;
 }
 .footer__social-icons img {
@@ -410,8 +404,7 @@
 }
 @media (max-width: 767px) {
   .footer__social-icons {
-    -moz-column-gap: 3vw;
-         column-gap: 3vw;
+    column-gap: 3vw;
   }
 }
 .footer__visa {
@@ -422,7 +415,6 @@
 
 #privacyPolicy,
 #publicOffer {
-  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid transparent;
 }

@@ -1,189 +1,214 @@
- // стили для блока
+// стили для блока
 
- #team {
-     padding: 30px;
- }
+#team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 14.3vw clamp(90px, 9.02vw, 130px) 14.3vw;
+}
 
- .team {
-     display: grid;
-     grid-template-columns: 2fr 1fr;
-     padding-left: 150px;
-     max-width: 1600px;
-     padding-right: 238px;
-     padding-top: 30px
- }
+.team {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  align-items: center;
+  column-gap: 80px;
 
- h2 {
-     @include h2;
-     font-family: 'Railway', sans-serif;
-     padding-left: 238px;
- }
+  &__title {
+    @include h2;
+    margin-bottom: clamp(65px, 5.75vw, 92px);
+    align-self: flex-start;
 
- h3 {
-     @include h3;
-     font-family: 'Railway', sans-serif;
- }
+    @media (max-width: 1299px) {
+      align-self: center;
+      text-align: center;
+    }
+  }
+}
 
- p {
-     @include main-text;
-     font-family: 'Railway', sans-serif;
- }
+#aboutbrand:hover {
+  @include menu-hover;
+}
 
- #aboutbrand:hover {
-     @include menu-hover;
-     font-family: 'Railway', sans-serif;
- }
+.team__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: clamp(350px, 29vw, 375px);
 
- .team__info {
-     display: grid;
-     padding-left: 124px;
- }
+  &_title {
+    @include h3;
+  }
 
+  &_text {
+    @include main-text;
+  }
+}
 
- @media (max-width: 1400px) {
+@media (max-width: 1400px) {
+  .team {
+    column-gap: 50px;
+  }
 
-     .team {
+  .slide__image {
+    max-width: 500px;
+    max-height: 400px;
+  }
+}
 
-         padding-left: 50px;
-         padding-right: 50px;
-     }
+@media (max-width: 1299px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    justify-items: center;
+  }
 
-     h2 {
-         padding-left: 30px;
-         text-align: center;
-     }
+  .team__info {
+    max-width: 700px;
+    max-height: 250px;
+  }
+}
 
-     .slide>img {
-         max-width: 500px;
-         max-height: 400px;
-     }
+// стили для слайдера
+.slider-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
 
+.slide {
+  max-width: 100%;
+  display: none;
+  animation-name: fade;
+  animation-duration: 1s;
+  text-align: center;
+}
 
+.slide__image {
+  max-width: 700px;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center;
+}
 
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
 
-     .team__info {
-         display: grid;
-         padding-left: 50px;
-     }
- }
+  to {
+    opacity: 1;
+  }
+}
 
- @media (max-width: 1024px) {
-     .team {
-         display: grid;
-         grid-template-columns: 1fr;
-         padding: 30px;
-     }
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
 
-     .team__info {
-         padding-left: 100px;
-     }
- }
+.controls:hover {
+  background: white;
+  transition: 0.3s;
+}
 
- // стили для слайдера
- .slider-container {
-     width: 80%;
-     margin: 0 auto;
-     position: relative;
-     overflow: hidden;
+.controls:active {
+  color: grey;
+}
 
- }
+#left-arrow {
+  left: 1px;
+}
 
- .slide {
-     width: 100%;
-     display: none;
-     animation-name: fade;
-     animation-duration: 1s;
-     text-align: center;
- }
+#right-arrow {
+  right: 1px;
+}
 
- img {
-     max-width: 700px;
-     max-height: 480px;
- }
+#dots-con {
+  margin-top: 20px;
+  text-align: center;
+}
 
- @keyframes fade {
-     from {
-         opacity: 0.5;
-     }
+.dot {
+  display: inline-block;
+  background: grey;
+  border-radius: 10%;
+  width: 30px;
+  height: 4px;
+  margin: 10px 5px;
+}
 
-     to {
-         opacity: 1;
-     }
- }
+.active {
+  background: rgb(0, 0, 0);
+}
 
- .controls {
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     font-size: 1.5em;
-     padding: 15px 10px;
-     border-radius: 5px;
+@media (max-width: 970px) {
+  .slide__image {
+    max-width: 600px;
+    max-height: 500px;
+  }
 
- }
+  .team__info {
+    max-width: 600px;
+  }
+}
 
- .controls:hover {
-     background: white;
-     transition: 0.3s;
- }
+@media (max-width: 835px) {
+  .slide__image {
+    max-width: 500px;
+    max-height: 400px;
+  }
 
- .controls:active {
-     color: grey;
- }
+  .team__info {
+    max-width: 500px;
+  }
+}
 
- #left-arrow {
-     left: 1px;
- }
+@media (max-width: 696px) {
+  .slide__image {
+    max-width: 400px;
+    max-height: 300px;
+  }
 
- #right-arrow {
-     right: 1px;
- }
+  .team__info {
+    max-width: 400px;
+  }
+}
 
- #dots-con {
-     text-align: center;
- }
+@media (max-width: 565px) {
+  .slide__image {
+    max-width: 350px;
+    max-height: 250px;
+  }
 
- .dot {
-     display: inline-block;
-     background: grey;
-     border-radius: 10%;
-     width: 30px;
-     height: 4px;
-     margin: 10px 5px;
- }
+  .team__info {
+    max-width: 350px;
+  }
+}
 
- .active {
-     background: rgb(0, 0, 0);
- }
+@media (max-width: 485px) {
+  .team {
+    row-gap: 0;
+  }
 
- @media (max-width:576px) {
-     .slider-container {
-         display: none;
-     }
+  .slider-container {
+    display: none;
+  }
 
-     #slide {
-         display: block;
-     }
+  #slide {
+    display: block;
+  }
 
-     .controls {
-         font-size: 1em;
-     }
+  .controls {
+    font-size: 1em;
+  }
 
-     #dots-con {
-         display: none;
-     }
-
-     h2 {
-         padding: 10px;
-         font-size: 3wv;
-     }
-
-     .team {
-         padding: 0;
-     }
-
-     .team__info {
-         display: grid;
-         padding-left: 20px;
-         padding-right: 20px;
-     }
- }
+  #dots-con {
+    display: none;
+  }
+}
