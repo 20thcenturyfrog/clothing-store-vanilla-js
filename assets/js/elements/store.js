@@ -1,5 +1,7 @@
 import { Product } from "../classes/products.js";
 
+const allItemsFilterBtn = document.getElementById("allItemsFilterBtn");
+const pageButtonOne = document.getElementById("pageBtn1");
 const productsSection = document.getElementById("productsSection");
 const loader = document.getElementById("loading");
 
@@ -18,6 +20,8 @@ async function fetchProducts(url) {
       ).addProduct()
     );
     hideLoading();
+    allItemsFilterBtn.classList.add("products__filter-button_active");
+    pageButtonOne.classList.add("products__page-button_active");
   } catch (error) {
     const errorMessage = document.createElement("p");
     errorMessage.className = "products__error-message";

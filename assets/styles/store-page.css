@@ -259,7 +259,7 @@ nav > ul > li:hover {
   padding-top: 19px;
   padding-bottom: 19px;
 }
-.products__filter-button:hover {
+.products__filter-button:hover, .products__filter-button_active {
   color: #ffffff;
   background-color: var(--font-color);
   border: 1px solid var(--font-color);
@@ -297,7 +297,7 @@ nav > ul > li:hover {
   width: 41px;
   height: 41px;
 }
-.products__page-button:hover {
+.products__page-button:hover, .products__page-button_active {
   color: #ffffff;
   background-color: var(--font-color);
   border: 1px solid var(--font-color);
