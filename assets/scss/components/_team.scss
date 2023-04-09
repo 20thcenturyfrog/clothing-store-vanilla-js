@@ -1,0 +1,189 @@
+ // стили для блока
+
+ #team {
+     padding: 30px;
+ }
+
+ .team {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     padding-left: 150px;
+     max-width: 1600px;
+     padding-right: 238px;
+     padding-top: 30px
+ }
+
+ h2 {
+     @include h2;
+     font-family: 'Railway', sans-serif;
+     padding-left: 238px;
+ }
+
+ h3 {
+     @include h3;
+     font-family: 'Railway', sans-serif;
+ }
+
+ p {
+     @include main-text;
+     font-family: 'Railway', sans-serif;
+ }
+
+ #aboutbrand:hover {
+     @include menu-hover;
+     font-family: 'Railway', sans-serif;
+ }
+
+ .team__info {
+     display: grid;
+     padding-left: 124px;
+ }
+
+
+ @media (max-width: 1400px) {
+
+     .team {
+
+         padding-left: 50px;
+         padding-right: 50px;
+     }
+
+     h2 {
+         padding-left: 30px;
+         text-align: center;
+     }
+
+     .slide>img {
+         max-width: 500px;
+         max-height: 400px;
+     }
+
+
+
+
+     .team__info {
+         display: grid;
+         padding-left: 50px;
+     }
+ }
+
+ @media (max-width: 1024px) {
+     .team {
+         display: grid;
+         grid-template-columns: 1fr;
+         padding: 30px;
+     }
+
+     .team__info {
+         padding-left: 100px;
+     }
+ }
+
+ // стили для слайдера
+ .slider-container {
+     width: 80%;
+     margin: 0 auto;
+     position: relative;
+     overflow: hidden;
+
+ }
+
+ .slide {
+     width: 100%;
+     display: none;
+     animation-name: fade;
+     animation-duration: 1s;
+     text-align: center;
+ }
+
+ img {
+     max-width: 700px;
+     max-height: 480px;
+ }
+
+ @keyframes fade {
+     from {
+         opacity: 0.5;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ .controls {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.5em;
+     padding: 15px 10px;
+     border-radius: 5px;
+
+ }
+
+ .controls:hover {
+     background: white;
+     transition: 0.3s;
+ }
+
+ .controls:active {
+     color: grey;
+ }
+
+ #left-arrow {
+     left: 1px;
+ }
+
+ #right-arrow {
+     right: 1px;
+ }
+
+ #dots-con {
+     text-align: center;
+ }
+
+ .dot {
+     display: inline-block;
+     background: grey;
+     border-radius: 10%;
+     width: 30px;
+     height: 4px;
+     margin: 10px 5px;
+ }
+
+ .active {
+     background: rgb(0, 0, 0);
+ }
+
+ @media (max-width:576px) {
+     .slider-container {
+         display: none;
+     }
+
+     #slide {
+         display: block;
+     }
+
+     .controls {
+         font-size: 1em;
+     }
+
+     #dots-con {
+         display: none;
+     }
+
+     h2 {
+         padding: 10px;
+         font-size: 3wv;
+     }
+
+     .team {
+         padding: 0;
+     }
+
+     .team__info {
+         display: grid;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+ }
