@@ -3,6 +3,8 @@
 
 @import "./components/tech";
 
+@import "./components/header";
+
 @import "./components/offer";
 
 @import "./components/new-collection";
@@ -10,6 +12,7 @@
 @import "./components/team";
 
 @import "./components/footer";
+
 
 main {
   display: flex;
