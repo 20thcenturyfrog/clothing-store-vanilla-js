@@ -1,245 +1,345 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WOMAZING</title>
+    <link rel="stylesheet" href="/assets/styles/normalize.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WOMAZING</title>
-  <link rel="stylesheet" href="/assets/styles/normalize.css" />
-  <link rel="stylesheet" href="/assets/styles/index.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="container__logo"><img src="./assets/images/logo-with-text.svg" alt="logo" />
-      </div>
-      <div class="container__nav">
-        <nav>
-          <ul>
-            <li><a href="#main">Главная</a></li>
-            <li><a href="#shop">Магазин</a></li>
-            <li><a href="#about">О бренде</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="container__phone">
-        <div><img src="./assets/images/telephone.svg" alt="phone"></div>
-        <p>+7 (495) 823-54-12</p>
-      </div>
-      <div class="container__basket"><img src="./assets/images/cart.svg" alt="shopping-bag">
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="header-offer-wrapper">
-      <section class="offer">
-        <div class="offer__desc">
-          <div class="offer__slider-body">
-            <div class="offer__slider-line">
-              <div class="offer__slide">
-                <h1 class="offer__title">
-                  Новые посту&shy;пле&shy;ния в этом сезоне
-                </h1>
-                <p class="offer__tagline">
-                  Утонченные сочетания и бархатные оттенки - вот то, что вы
-                  искали в этом сезоне. Время исследовать.
-                </p>
+  <body>
+    <main>
+      <div class="header-offer-wrapper">
+        <header>
+          <div class="container">
+            <div class="container__logo">
+              <img src="./assets/images/logo-with-text.svg" alt="logo" />
+            </div>
+            <div class="container__nav">
+              <nav>
+                <ul>
+                  <li><a href="#main">Главная</a></li>
+                  <li><a href="#shop">Магазин</a></li>
+                  <li><a href="#about">О бренде</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="container__phone">
+              <div><img src="./assets/images/telephone.svg" alt="phone" /></div>
+              <p>
+                <span class="container__phone_num">+7 (495) 823-54-12</span>
+              </p>
+            </div>
+            <div class="container__basket">
+              <img src="./assets/images/cart.svg" alt="shopping-bag" />
+            </div>
+          </div>
+        </header>
+        <section class="offer">
+          <div class="offer__desc">
+            <div class="offer__slider-body">
+              <div class="offer__slider-line">
+                <div class="offer__slide">
+                  <h1 class="offer__title">
+                    Новые посту&shy;пле&shy;ния в этом сезоне
+                  </h1>
+                  <p class="offer__tagline">
+                    Утонченные сочетания и бархатные оттенки - вот то, что вы
+                    искали в этом сезоне. Время исследовать.
+                  </p>
+                </div>
+                <div class="offer__slide">
+                  <h1 class="offer__title">
+                    Что-то новенькое. Мы заждались тебя.
+                  </h1>
+                  <p class="offer__tagline">
+                    Надоело искать себя в сером городе? Настало время новых
+                    идей, свежих красок и вдохновения с Womazing!
+                  </p>
+                </div>
+                <div class="offer__slide">
+                  <h1 class="offer__title">Включай новый сезон с WOMAZING</h1>
+                  <p class="offer__tagline">
+                    Мы обновили ассортимент - легендарные коллекции и новинки от
+                    отечественных дизайнеров
+                  </p>
+                </div>
               </div>
-              <div class="offer__slide">
-                <h1 class="offer__title">
-                  Что-то новенькое. Мы заждались тебя.
-                </h1>
-                <p class="offer__tagline">
-                  Надоело искать себя в сером городе? Настало время новых
-                  идей, свежих красок и вдохновения с Womazing!
-                </p>
+            </div>
+            <div class="offer__buttons">
+              <button
+                id="offerScrollBtn"
+                class="offer__button offer__button_scroll"
+              >
+                <img
+                  class="offer__arrow"
+                  src="./assets/images/arrow-down.svg"
+                  alt="arrow down"
+                />
+              </button>
+              <button
+                id="offerStoreBtn"
+                class="offer__button offer__button_store"
+              >
+                Открыть магазин
+              </button>
+            </div>
+            <div class="offer__slider-nav">
+              <div class="offer__slider-click" id="offerSlideNav1"></div>
+              <div class="offer__slider-click" id="offerSlideNav2"></div>
+              <div class="offer__slider-click" id="offerSlideNav3"></div>
+            </div>
+          </div>
+          <div class="offer__pictures">
+            <div class="offer__picture-wrap">
+              <div class="offer__slider-pic-body">
+                <div class="offer__slider-pic-line">
+                  <img
+                    class="offer__photo offer__photo_large"
+                    id="offerPic1"
+                    src="./assets/images/offer-photo-large.jpg"
+                    alt="a model in brand clothes"
+                  />
+                  <img
+                    class="offer__photo offer__photo_large"
+                    id="offerPic2"
+                    src="./assets/images/offer-photo-large.jpg"
+                    alt="a model in brand clothes"
+                  />
+                  <img
+                    class="offer__photo offer__photo_large"
+                    id="offerPic3"
+                    src="./assets/images/offer-photo-large.jpg"
+                    alt="a model in brand clothes"
+                  />
+                </div>
               </div>
-              <div class="offer__slide">
-                <h1 class="offer__title">Включай новый сезон с WOMAZING</h1>
-                <p class="offer__tagline">
-                  Мы обновили ассортимент - легендарные коллекции и новинки от
-                  отечественных дизайнеров
-                </p>
+              <div class="offer__pictures-container">
+                <img
+                  class="offer__photo offer__photo_small"
+                  src="./assets/images/offer-photo-small.jpg"
+                  alt="a model in brand clothes"
+                />
+                <img
+                  class="offer__photo offer__photo_mid"
+                  src="./assets/images/offer-photo-mid.jpg"
+                  alt="a model in brand clothes"
+                />
               </div>
             </div>
           </div>
-          <div class="offer__buttons">
-            <button id="offerScrollBtn" class="offer__button offer__button_scroll">
-              <img class="offer__arrow" src="./assets/images/arrow-down.svg" alt="arrow down" />
-            </button>
-            <button id="offerStoreBtn" class="offer__button offer__button_store">
-              Открыть магазин
-            </button>
+        </section>
+      </div>
+      <section class="new-collection">
+        <h2 class="new-collection__title">Новая коллекция</h2>
+        <div class="new-collection__slider-arrow-wrapper">
+          <img
+            class="new-collection__slider-side-arrow"
+            id="newCollectionPrevSlideSideArrow"
+            src="./assets/images/arrow-left-black.svg"
+            alt="&larr;"
+          />
+          <div class="new-collection__slider-body">
+            <div class="new-collection__slider-line">
+              <div class="new-collection__item">
+                <div class="new-collection__image-wrapper">
+                  <img
+                    class="new-collection__item-image"
+                    id="newCollectionImg1"
+                    src="./assets/images/item-1.jpg"
+                    alt="new item"
+                  />
+                  <div class="new-collection__item-image-arrow">
+                    <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
+                  </div>
+                </div>
+                <div class="new-collection__item-name">Футболка USA</div>
+                <div class="new-collection__item-price">
+                  <span class="new-collection__item-price_old">$229</span
+                  >&nbsp;&nbsp;$129
+                </div>
+              </div>
+              <div class="new-collection__item">
+                <div class="new-collection__image-wrapper">
+                  <img
+                    class="new-collection__item-image"
+                    id="newCollectionImg2"
+                    src="./assets/images/item-2.jpg"
+                    alt="new item"
+                  />
+                  <div class="new-collection__item-image-arrow">
+                    <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
+                  </div>
+                </div>
+                <div class="new-collection__item-name">Купальник Glow</div>
+                <div class="new-collection__item-price">$129</div>
+              </div>
+              <div class="new-collection__item">
+                <div class="new-collection__image-wrapper">
+                  <img
+                    class="new-collection__item-image"
+                    id="newCollectionImg3"
+                    src="./assets/images/item-3.jpg"
+                    alt="new item"
+                  />
+                  <div class="new-collection__item-image-arrow">
+                    <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
+                  </div>
+                </div>
+                <div class="new-collection__item-name">Свитшот Sweet Shot</div>
+                <div class="new-collection__item-price">$129</div>
+              </div>
+            </div>
           </div>
-          <div class="offer__slider-nav">
-            <div class="offer__slider-click" id="offerSlideNav1"></div>
-            <div class="offer__slider-click" id="offerSlideNav2"></div>
-            <div class="offer__slider-click" id="offerSlideNav3"></div>
-          </div>
+          <img
+            class="new-collection__slider-side-arrow"
+            id="newCollectionNextSlideSideArrow"
+            src="./assets/images/arrow-right-black.svg"
+            alt="&rarr;"
+          />
         </div>
-        <div class="offer__pictures">
-          <div class="offer__picture-wrap">
-            <div class="offer__slider-pic-body">
-              <div class="offer__slider-pic-line">
-                <img class="offer__photo offer__photo_large" id="offerPic1" src="./assets/images/offer-photo-large.jpg"
-                  alt="a model in brand clothes" />
-                <img class="offer__photo offer__photo_large" id="offerPic2" src="./assets/images/offer-photo-large.jpg"
-                  alt="a model in brand clothes" />
-                <img class="offer__photo offer__photo_large" id="offerPic3" src="./assets/images/offer-photo-large.jpg"
-                  alt="a model in brand clothes" />
+        <div class="new-collection__slider-bottom-arrows">
+          <img
+            class="new-collection__slider-bottom-arrow"
+            id="newCollectionPrevSlideBottomArrow"
+            src="./assets/images/arrow-left-black.svg"
+            alt="&larr;"
+          />
+          <img
+            class="new-collection__slider-bottom-arrow"
+            id="newCollectionNextSlideBottomArrow"
+            src="./assets/images/arrow-right-black.svg"
+            alt="&rarr;"
+          />
+        </div>
+        <button class="new-collection__button" id="newCollectionBtn">
+          Открыть магазин
+        </button>
+      </section>
+      <section id="team">
+        <h2 class="team__title">Команда мечты Womazing</h2>
+        <div class="team">
+          <div class="team__slider">
+            <div class="slider-container">
+              <div class="slide" id="slide">
+                <img
+                  class="slide__image"
+                  src="assets/images/dream-team.jpg"
+                  alt="photo of team 1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  class="slide__image"
+                  src="assets/images/about-1.jpg"
+                  alt="photo of team 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  class="slide__image"
+                  src="assets/images/about-2.jpg"
+                  alt="photo of team 3"
+                />
+              </div>
+              <span class="controls" id="left-arrow"
+                ><img
+                  class="slide__image"
+                  src="/assets/images/vector1.png"
+                  alt="arrow left"
+                />
+              </span>
+              <span class="controls" id="right-arrow"
+                ><img
+                  class="slide__image"
+                  src="/assets/images/vector2.png"
+                  alt="arrow right"
+                />
+              </span>
+
+              <div id="dots-con">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
             </div>
-            <div class="offer__pictures-container">
-              <img class="offer__photo offer__photo_small" src="./assets/images/offer-photo-small.jpg"
-                alt="a model in brand clothes" />
-              <img class="offer__photo offer__photo_mid" src="./assets/images/offer-photo-mid.jpg"
-                alt="a model in brand clothes" />
-            </div>
+          </div>
+          <div class="team__info">
+            <h3 class="team__info_title">Для каждой</h3>
+            <p class="team__info_text">
+              Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
+            </p>
+            <p class="team__info_text">
+              Womazing ищет эти мелочи и создает прекрасные вещи, которые
+              выгодно подчеркивают достоинства каждой девушки.
+            </p>
+            <p class="team__info_text">
+              <span id="aboutbrand">Подробнее о бренде</span>
+            </p>
           </div>
         </div>
       </section>
-    </div>
-    <section class="new-collection">
-      <h2 class="new-collection__title">Новая коллекция</h2>
-      <div class="new-collection__slider-arrow-wrapper">
-        <img class="new-collection__slider-side-arrow" id="newCollectionPrevSlideSideArrow"
-          src="./assets/images/arrow-left-black.svg" alt="&larr;" />
-        <div class="new-collection__slider-body">
-          <div class="new-collection__slider-line">
-            <div class="new-collection__item">
-              <div class="new-collection__image-wrapper">
-                <img class="new-collection__item-image" id="newCollectionImg1" src="./assets/images/item-1.jpg"
-                  alt="new item" />
-                <div class="new-collection__item-image-arrow">
-                  <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
-                </div>
-              </div>
-              <div class="new-collection__item-name">Футболка USA</div>
-              <div class="new-collection__item-price">
-                <span class="new-collection__item-price_old">$229</span>&nbsp;&nbsp;$129
-              </div>
-            </div>
-            <div class="new-collection__item">
-              <div class="new-collection__image-wrapper">
-                <img class="new-collection__item-image" id="newCollectionImg2" src="./assets/images/item-2.jpg"
-                  alt="new item" />
-                <div class="new-collection__item-image-arrow">
-                  <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
-                </div>
-              </div>
-              <div class="new-collection__item-name">Купальник Glow</div>
-              <div class="new-collection__item-price">$129</div>
-            </div>
-            <div class="new-collection__item">
-              <div class="new-collection__image-wrapper">
-                <img class="new-collection__item-image" id="newCollectionImg3" src="./assets/images/item-3.jpg"
-                  alt="new item" />
-                <div class="new-collection__item-image-arrow">
-                  <img src="./assets/images/arrow-right.svg" alt="&rarr;" />
-                </div>
-              </div>
-              <div class="new-collection__item-name">Свитшот Sweet Shot</div>
-              <div class="new-collection__item-price">$129</div>
-            </div>
-          </div>
-        </div>
-        <img class="new-collection__slider-side-arrow" id="newCollectionNextSlideSideArrow"
-          src="./assets/images/arrow-right-black.svg" alt="&rarr;" />
-      </div>
-      <div class="new-collection__slider-bottom-arrows">
-        <img class="new-collection__slider-bottom-arrow" id="newCollectionPrevSlideBottomArrow"
-          src="./assets/images/arrow-left-black.svg" alt="&larr;" />
-        <img class="new-collection__slider-bottom-arrow" id="newCollectionNextSlideBottomArrow"
-          src="./assets/images/arrow-right-black.svg" alt="&rarr;" />
-      </div>
-      <button class="new-collection__button" id="newCollectionBtn">
-        Открыть магазин
-      </button>
-    </section>
-    <section id="team">
-      <h2 class="team__title">Команда мечты Womazing</h2>
-      <div class="team">
-        <div class="team__slider">
-          <div class="slider-container">
-            <div class="slide" id="slide">
-              <img class="slide__image" src="assets/images/dream-team.jpg" alt="photo of team 1" />
-            </div>
-            <div class="slide">
-              <img class="slide__image" src="assets/images/about-1.jpg" alt="photo of team 2" />
-            </div>
-            <div class="slide">
-              <img class="slide__image" src="assets/images/about-2.jpg" alt="photo of team 3" />
-            </div>
-            <span class="controls" id="left-arrow"><img class="slide__image" src="/assets/images/vector1.png"
-                alt="arrow left" />
-            </span>
-            <span class="controls" id="right-arrow"><img class="slide__image" src="/assets/images/vector2.png"
-                alt="arrow right" />
-            </span>
-
-            <div id="dots-con">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-        <div class="team__info">
-          <h3 class="team__info_title">Для каждой</h3>
-          <p class="team__info_text">
-            Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
-          </p>
-          <p class="team__info_text">
-            Womazing ищет эти мелочи и создает прекрасные вещи, которые
-            выгодно подчеркивают достоинства каждой девушки.
-          </p>
-          <p class="team__info_text">
-            <span id="aboutbrand">Подробнее о бренде</span>
-          </p>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">
+        <img
+          class="footer__logo-img"
+          id="footerLogoImg"
+          src="./assets/images/logo-with-text.svg"
+          alt="Womazing"
+        />
+        <div class="footer__info">
+          <p>© Все права защищены</p>
+          <p id="privacyPolicy">Политика конфиденциальности</p>
+          <p id="publicOffer">Публичная оферта</p>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__logo">
-      <img class="footer__logo-img" id="footerLogoImg" src="./assets/images/logo-with-text.svg" alt="Womazing" />
-      <div class="footer__info">
-        <p>© Все права защищены</p>
-        <p id="privacyPolicy">Политика конфиденциальности</p>
-        <p id="publicOffer">Публичная оферта</p>
+      <div class="footer__nav">
+        <a class="footer__link footer__link_active" href="#">Главная</a>
+        <a class="footer__link" href="#">Магазин</a>
+        <a class="footer__link" href="#">О&nbsp;бренде</a>
+        <a class="footer__link" href="#">Контакты</a>
+        <div class="footer__clothing-links">
+          <a class="footer__clothing-link" href="#">Пальто</a>
+          <a class="footer__clothing-link" href="#">Свитшоты</a>
+          <a class="footer__clothing-link" href="#">Кардиганы</a>
+          <a class="footer__clothing-link" href="#">Толстовки</a>
+        </div>
       </div>
-    </div>
-    <div class="footer__nav">
-      <a class="footer__link footer__link_active" href="#">Главная</a>
-      <a class="footer__link" href="#">Магазин</a>
-      <a class="footer__link" href="#">О&nbsp;бренде</a>
-      <a class="footer__link" href="#">Контакты</a>
-      <div class="footer__clothing-links">
-        <a class="footer__clothing-link" href="#">Пальто</a>
-        <a class="footer__clothing-link" href="#">Свитшоты</a>
-        <a class="footer__clothing-link" href="#">Кардиганы</a>
-        <a class="footer__clothing-link" href="#">Толстовки</a>
+      <div class="footer__socials">
+        <div class="footer__tel-email">
+          <p class="footer__tel" id="footerTel">+7 (495) 823-54-12</p>
+          <p class="footer__email" id="footerEmail">hello@womazing.com</p>
+        </div>
+        <div class="footer__social-icons">
+          <img
+            id="footerInstagramIcon"
+            src="./assets/images/instagram.svg"
+            alt="instagram icon"
+          />
+          <img
+            id="footerFacebookIcon"
+            src="./assets/images/facebook.svg"
+            alt="facebook icon"
+          />
+          <img
+            id="footerTwitterIcon"
+            src="./assets/images/twitter.svg"
+            alt="twitter icon"
+          />
+        </div>
+        <div class="footer__visa">
+          <img
+            id="footerVisaImg"
+            src="./assets/images/visa-mastercard.svg"
+            alt=""
+          />
+        </div>
       </div>
-    </div>
-    <div class="footer__socials">
-      <div class="footer__tel-email">
-        <p class="footer__tel" id="footerTel">+7 (495) 823-54-12</p>
-        <p class="footer__email" id="footerEmail">hello@womazing.com</p>
-      </div>
-      <div class="footer__social-icons">
-        <img id="footerInstagramIcon" src="./assets/images/instagram.svg" alt="instagram icon" />
-        <img id="footerFacebookIcon" src="./assets/images/facebook.svg" alt="facebook icon" />
-        <img id="footerTwitterIcon" src="./assets/images/twitter.svg" alt="twitter icon" />
-      </div>
-      <div class="footer__visa">
-        <img id="footerVisaImg" src="./assets/images/visa-mastercard.svg" alt="" />
-      </div>
-    </div>
-  </footer>
-  <script src="./assets/js/index.js" type="module"></script>
-</body>
-
+    </footer>
+    <script src="./assets/js/index.js" type="module"></script>
+  </body>
 </html>

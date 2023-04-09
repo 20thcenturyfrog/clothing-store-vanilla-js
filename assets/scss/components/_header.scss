@@ -1,96 +1,90 @@
 .container {
-    display: grid;
-    grid-template-columns: 15% 52% 32% 2%;
-    padding-left: 15%;
-    padding-right: 20%;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    max-width: 1600px;
+  display: grid;
+  grid-template-columns: 15% 52% 32% 2%;
+  padding-left: 15%;
+  padding-right: 20%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  max-width: 1600px;
+  align-items: center;
 
-    @media (max-width: $desktop) {
-        padding-left: 10%;
-        padding-right: 10%;
-        display: flex;
-        justify-content: space-around;
-    }
+  @media (max-width: $desktop) {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-around;
+  }
 
-    @media (max-width: $tablet) {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
+  @media (max-width: $tablet) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @media (max-width: $tablet) {
-    .container__logo>img {
-        max-width: 80%;
-    }
-
+  .container__logo > img {
+    max-width: 80%;
+  }
 }
 
-@media (max-width: $mobile) {
-    .container__logo>img {
-        display: none;
-    }
+@media (max-width: 563px) {
+  .container__logo > img {
+    display: none;
+  }
 }
-
 
 .container__nav {
-    padding-left: 90px;
+  padding-left: 90px;
+
+  @media (max-width: 663px) {
+    padding-left: 0;
+  }
 }
 
-nav>ul {
-    display: flex;
-    gap: 15px;
-
-    @media (max-width: $tablet) {
-        gap: 5px;
-    }
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-
-ul>li {
-    list-style-type: none;
-    @include menu;
-
-    @media (max-width: $tablet) {
-        font-size: 12px;
-    }
-
-    @media (max-width: $mobile) {
-        font-size: 15px;
-    }
+nav > ul > li {
+  list-style-type: none;
+  @include menu;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
 }
 
-a:hover {
-    @include menu-hover;
+nav > ul > li > a:hover {
+  @include menu-hover;
 }
 
 .container__phone {
-    display: grid;
-    grid-template-columns: 0.4fr 3fr;
+  display: grid;
+  grid-template-columns: 0.1fr 3fr;
+  column-gap: 10px;
+  @include menu;
 
-    font-size: 15px;
+  &_num:hover {
+    @include menu-hover;
+  }
 
-    @media (max-width: $big-tablet) {
-        display: none;
-    }
+  @media (max-width: $big-tablet) {
+    display: none;
+  }
 }
 
-.container__phone>img {
-    width: 17px;
-    height: 17px;
+.container__phone > img {
+  width: 17px;
+  height: 17px;
 }
 
 .container__basket {
-    padding-left: 40px;
+  padding-left: 40px;
 
-    @media (max-width: $big-tablet) {
-        display: none;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
