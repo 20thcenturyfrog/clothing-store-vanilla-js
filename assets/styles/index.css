@@ -71,6 +71,10 @@
     padding-left: 0;
   }
 }
+.container__nav-link_active {
+  color: var(--cta-color);
+  font-weight: 700;
+}
 
 nav > ul {
   display: flex;
