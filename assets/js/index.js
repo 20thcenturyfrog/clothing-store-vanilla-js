@@ -24,6 +24,14 @@ import {
 } from "./elements/new-collection.js";
 
 import {
+  arrowLeft,
+  arrowRight,
+  prevSlideMove,
+  nextSlideMove,
+  changeSlider,
+} from "./elements/team.js";
+
+import {
   footerLogoImg,
   footerPrivacyPolicy,
   footerPublicOffer,
@@ -85,6 +93,12 @@ nextSlideBottomArrow.addEventListener(
   newCollectionSlider.moveSliderForward
 );
 
+// Team
+
+arrowLeft.addEventListener("click", prevSlideMove);
+arrowRight.addEventListener("click", nextSlideMove);
+changeSlider();
+
 // Footer
 
 footerLogoImg.attachLink("index.html");
@@ -98,16 +112,3 @@ footerTwitterIcon.attachLink("#");
 footerVisaImg.attachLink("#");
 footerMainPageLink.attachLink("index.html");
 footerStoreLink.attachLink("store.html");
-
-// функция для слайдера "команда"
-import {
-  arrowLeft,
-  arrowRight,
-  prevSlideMove,
-  nextSlideMove,
-  changeSlider,
-} from "./elements/team.js";
-
-arrowLeft.addEventListener("click", prevSlideMove);
-arrowRight.addEventListener("click", nextSlideMove);
-changeSlider();
