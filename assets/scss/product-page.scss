@@ -1,0 +1,9 @@
+@import "./components/tech";
+
+@import "./components/product";
+
+@import "./components/footer";
+main {
+  display: flex;
+  flex-direction: column;
+}
