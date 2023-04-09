@@ -9,6 +9,9 @@ const footerInstagramIcon = new Button("footerInstagramIcon");
 const footerFacebookIcon = new Button("footerFacebookIcon");
 const footerTwitterIcon = new Button("footerTwitterIcon");
 const footerVisaImg = new Button("footerVisaImg");
+const footerMainPageLink = new Button("footerMainPageLink");
+const footerStoreLink = new Button("footerStoreLink");
+const footerFilterLinks = document.querySelectorAll(".footer__clothing-link");
 
 export {
   footerLogoImg,
@@ -20,4 +23,7 @@ export {
   footerFacebookIcon,
   footerTwitterIcon,
   footerVisaImg,
+  footerMainPageLink,
+  footerStoreLink,
+  footerFilterLinks,
 };

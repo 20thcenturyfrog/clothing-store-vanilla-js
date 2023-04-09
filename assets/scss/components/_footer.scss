@@ -70,6 +70,7 @@
   // .footer__link
 
   &__link {
+    width: min-content;
     color: var(--font-color);
     padding-bottom: 3px;
     border: 1px solid transparent;
@@ -102,6 +103,10 @@
     &:hover {
       @include menu-hover;
       font-weight: 400;
+    }
+    &_active {
+      color: var(--cta-color);
+      font-weight: 700;
     }
   }
 

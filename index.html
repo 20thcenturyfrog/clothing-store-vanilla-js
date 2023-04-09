@@ -20,10 +20,10 @@
             <div class="container__nav">
               <nav>
                 <ul>
-                  <li><a href="#main">Главная</a></li>
-                  <li><a href="#shop">Магазин</a></li>
-                  <li><a href="#about">О бренде</a></li>
-                  <li><a href="#contacts">Контакты</a></li>
+                  <li class="container__nav-link_active" id="headerMainPageLink">Главная</li>
+                  <li id="headerStoreLink">Магазин</li>
+                  <li>О бренде</li>
+                  <li>Контакты</li>
                 </ul>
               </nav>
             </div>
@@ -133,7 +133,7 @@
           </div>
         </section>
       </div>
-      <section class="new-collection">
+      <section class="new-collection" id="newCollection">
         <h2 class="new-collection__title">Новая коллекция</h2>
         <div class="new-collection__slider-arrow-wrapper">
           <img
@@ -148,7 +148,6 @@
                 <div class="new-collection__image-wrapper">
                   <img
                     class="new-collection__item-image"
-                    id="newCollectionImg1"
                     src="./assets/images/item-1.jpg"
                     alt="new item"
                   />
@@ -166,7 +165,6 @@
                 <div class="new-collection__image-wrapper">
                   <img
                     class="new-collection__item-image"
-                    id="newCollectionImg2"
                     src="./assets/images/item-2.jpg"
                     alt="new item"
                   />
@@ -181,7 +179,6 @@
                 <div class="new-collection__image-wrapper">
                   <img
                     class="new-collection__item-image"
-                    id="newCollectionImg3"
                     src="./assets/images/item-3.jpg"
                     alt="new item"
                   />
@@ -298,15 +295,21 @@
         </div>
       </div>
       <div class="footer__nav">
-        <a class="footer__link footer__link_active" href="#">Главная</a>
-        <a class="footer__link" href="#">Магазин</a>
-        <a class="footer__link" href="#">О&nbsp;бренде</a>
-        <a class="footer__link" href="#">Контакты</a>
+        <a class="footer__link footer__link_active" id="footerMainPageLink"
+          >Главная</a
+        >
+        <a class="footer__link" id="footerStoreLink">Магазин</a>
+        <a class="footer__link">О&nbsp;бренде</a>
+        <a class="footer__link">Контакты</a>
         <div class="footer__clothing-links">
-          <a class="footer__clothing-link" href="#">Пальто</a>
-          <a class="footer__clothing-link" href="#">Свитшоты</a>
-          <a class="footer__clothing-link" href="#">Кардиганы</a>
-          <a class="footer__clothing-link" href="#">Толстовки</a>
+          <a class="footer__clothing-link" id="women%27s%20clothing"
+            >Женская одежда</a
+          >
+          <a class="footer__clothing-link" id="men%27s%20clothing"
+            >Мужская одежда</a
+          >
+          <a class="footer__clothing-link" id="jewelery">Украшения</a>
+          <a class="footer__clothing-link" id="electronics">Электроника</a>
         </div>
       </div>
       <div class="footer__socials">

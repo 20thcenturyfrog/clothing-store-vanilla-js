@@ -39,6 +39,11 @@
   @media (max-width: 663px) {
     padding-left: 0;
   }
+
+  &-link_active {
+    color: var(--cta-color);
+    font-weight: 700;
+  }
 }
 
 nav > ul {
@@ -52,13 +57,11 @@ nav > ul > li {
   @include menu;
 }
 
-nav > ul > li > a {
-  text-decoration: none;
-  color: black;
-}
-
-nav > ul > li > a:hover {
-  @include menu-hover;
+nav > ul > li:hover {
+  color: var(--cta-color);
+  border-bottom: 1px solid var(--link-underline-color);
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .container__phone {
@@ -68,7 +71,10 @@ nav > ul > li > a:hover {
   @include menu;
 
   &_num:hover {
-    @include menu-hover;
+    color: var(--cta-color);
+    border-bottom: 1px solid var(--link-underline-color);
+    transition: 0.5s ease;
+    cursor: pointer;
   }
 
   @media (max-width: $big-tablet) {

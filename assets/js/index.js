@@ -1,3 +1,5 @@
+import { headerMainPageLink, headerStoreLink } from "./elements/header.js";
+
 import {
   offerScrollBtn,
   offerStoreBtn,
@@ -13,12 +15,21 @@ import {
 } from "./elements/offer.js";
 
 import {
+  newCollectionBtn,
   newCollectionSlider,
   prevSlideSideArrow,
   nextSlideSideArrow,
   prevSlideBottomArrow,
   nextSlideBottomArrow,
 } from "./elements/new-collection.js";
+
+import {
+  arrowLeft,
+  arrowRight,
+  prevSlideMove,
+  nextSlideMove,
+  changeSlider,
+} from "./elements/team.js";
 
 import {
   footerLogoImg,
@@ -30,12 +41,19 @@ import {
   footerFacebookIcon,
   footerTwitterIcon,
   footerVisaImg,
+  footerMainPageLink,
+  footerStoreLink,
 } from "./elements/footer.js";
+
+// Header
+
+headerMainPageLink.attachLink("index.html");
+headerStoreLink.attachLink("store.html");
 
 // Offer
 
-offerScrollBtn.attachLink("#");
-offerStoreBtn.attachLink("#");
+offerScrollBtn.attachLink("#newCollection");
+offerStoreBtn.attachLink("store.html");
 
 offerScrollBtn.onMouseOver(moveArrowIcon);
 offerScrollBtn.onMouseOut(unmoveArrowIcon);
@@ -52,6 +70,8 @@ moveOnSliderClick(offerSlideNav3, 2);
 autoMoveSlider();
 
 // New Collection
+
+newCollectionBtn.attachLink("store.html");
 
 newCollectionSlider.init();
 window.addEventListener("resize", newCollectionSlider.init);
@@ -73,9 +93,15 @@ nextSlideBottomArrow.addEventListener(
   newCollectionSlider.moveSliderForward
 );
 
+// Team
+
+arrowLeft.addEventListener("click", prevSlideMove);
+arrowRight.addEventListener("click", nextSlideMove);
+changeSlider();
+
 // Footer
 
-footerLogoImg.attachLink("#");
+footerLogoImg.attachLink("index.html");
 footerPrivacyPolicy.attachLink("#");
 footerPublicOffer.attachLink("#");
 footerTel.attachLink("#");
@@ -84,21 +110,5 @@ footerInstagramIcon.attachLink("#");
 footerFacebookIcon.attachLink("#");
 footerTwitterIcon.attachLink("#");
 footerVisaImg.attachLink("#");
-
-// функция для слайдера "команда"
-import {
-  slides,
-  dots,
-  arrowLeft,
-  arrowRight,
-  index,
-  prevSlideMove,
-  nextSlideMove,
-  changeSlider,
-} from "./elements/team.js"
-
-
-
-arrowLeft.addEventListener('click', prevSlideMove);
-arrowRight.addEventListener('click', nextSlideMove);
-changeSlider();
+footerMainPageLink.attachLink("index.html");
+footerStoreLink.attachLink("store.html");
