@@ -512,6 +512,50 @@ nav > ul > li:hover {
   cursor: pointer;
 }
 
+#need{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 14.3vw clamp(90px, 9.02vw, 130px) 14.3vw;
+}
+.what_do_we_need {
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+  margin-bottom: clamp(65px, 5.75vw, 92px);
+  align-self: flex-start;
+}
+.whatDoWeNeed {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.what_do_we_need_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.need_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.what_do_we_need_info_header {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+  color: var(--font-color);
+}
+.what_do_we_need_info_text {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0.02rem;
+}
+
 #team {
   display: flex;
   flex-direction: column;
