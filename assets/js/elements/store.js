@@ -12,14 +12,14 @@ async function fetchProducts(url) {
   try {
     const response = await fetch(url);
     const productArray = await response.json();
-    productArray.forEach((i) =>
+    productArray.forEach((product) =>
       new Product(
-        i.id,
-        i.title,
-        i.price,
-        i.category,
-        i.description,
-        i.image
+        product.id,
+        product.title,
+        product.price,
+        product.category,
+        product.description,
+        product.image
       ).addProduct()
     );
     hideLoading();
@@ -45,14 +45,14 @@ async function fetchFilteredProducts(url) {
   try {
     const response = await fetch(url);
     const productArray = await response.json();
-    productArray.forEach((i) =>
+    productArray.forEach((product) =>
       new Product(
-        i.id,
-        i.title,
-        i.price,
-        i.category,
-        i.description,
-        i.image
+        product.id,
+        product.title,
+        product.price,
+        product.category,
+        product.description,
+        product.image
       ).addProduct()
     );
     hideLoading();
