@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Raleway";
-  src: url("../../fonts/Raleway-VariableFont_wght.eot");
-  src: url("../../fonts/Raleway-VariableFont_wght.eot") format("embedded-opentype"), url("../../fonts/Raleway-VariableFont_wght.woff2") format("woff2"), url("../../fonts/Raleway-VariableFont_wght.woff") format("woff"), url("../../fonts/Raleway-VariableFont_wght.ttf") format("truetype"), url("../../fonts/Raleway-VariableFont_wght.otf") format("opentype");
+  src: url("../../assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("../../assets/fonts/Raleway-VariableFont_wght.eot") format("embedded-opentype"), url("../../assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"), url("../../assets/fonts/Raleway-VariableFont_wght.woff") format("woff"), url("../../assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"), url("../../assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
   font-weight: 300 800;
   font-style: normal;
 }
